@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="wireGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6600"/>
+      <stop offset="50%" stop-color="#FFAA00"/>
+      <stop offset="100%" stop-color="#FF6600"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <path d="M16 44 Q32 44 48 44 Q48 44 44 48 Q32 48 20 48 Q16 48 16 44" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Cable Body -->
+  <g id="cable">
+    <path d="M16 32 Q24 32 28 28 Q32 24 36 24 Q40 24 44 28 Q48 32 56 32" stroke="url(#wireGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M16 32 Q24 32 28 28 Q32 24 36 24" stroke="#FFFFFF" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+  </g>
+  
+  <!-- Connector Left -->
+  <g id="connector-left">
+    <rect x="12" y="28" width="6" height="8" rx="1" fill="#1A1F26" stroke="#2D3440" stroke-width="1"/>
+    <rect x="13" y="30" width="1" height="4" rx="0.5" fill="#FFAA00"/>
+    <rect x="15" y="30" width="1" height="4" rx="0.5" fill="#FFAA00"/>
+  </g>
+  
+  <!-- Connector Right -->
+  <g id="connector-right">
+    <rect x="54" y="28" width="6" height="8" rx="1" fill="#1A1F26" stroke="#2D3440" stroke-width="1"/>
+    <rect x="55" y="30" width="1" height="4" rx="0.5" fill="#FFAA00"/>
+    <rect x="57" y="30" width="1" height="4" rx="0.5" fill="#FFAA00"/>
+  </g>
+  
+  <!-- Signal Flow -->
+  <g id="signal">
+    <circle cx="32" cy="26" r="2" fill="#00D5FF" filter="url(#cyanGlow)" opacity="0.6"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="14" y="30"/>
+    <use href="#bolt" x="58" y="30"/>
+  </g>
+</svg>

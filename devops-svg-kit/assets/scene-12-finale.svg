@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6470"/>
+      <stop offset="0.5" stop-color="#3C434D"/>
+      <stop offset="1" stop-color="#262C34"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.30)"/>
+      <stop offset="1" stop-color="rgba(0,180,255,0.20)"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="bolt">
+      <circle r="4" fill="#39414B"/>
+      <circle r="1.8" fill="#252B33" stroke="none"/>
+      <circle cx="-1.2" cy="-1.2" r="1" fill="#596270" stroke="none"/>
+    </g>
+  </defs>
+
+  <g id="shadow" fill="rgba(0,0,0,0.35)" stroke="none">
+    <polygon points="96,80 146,105 96,130 46,105"/>
+    <polygon points="142,138 168,151 142,164 116,151"/>
+    <polygon points="256,168 302,191 256,214 210,191"/>
+    <polygon points="184,223 228,245 184,267 140,245"/>
+    <polygon points="302,257 358,285 302,313 246,285"/>
+    <polygon points="400,194 430,209 400,224 370,209"/>
+    <polygon points="190,325 234,347 190,369 146,347"/>
+    <polygon points="434,292 464,307 434,322 404,307"/>
+    <polygon points="434,401 506,437 434,473 362,437"/>
+  </g>
+
+  <g id="metal">
+    <!-- ground pads -->
+    <g id="pads" fill="#171C24">
+      <polygon points="92,77 142,102 92,127 42,102"/>
+      <polygon points="138,135 164,148 138,161 112,148"/>
+      <polygon points="252,165 298,188 252,211 206,188"/>
+      <polygon points="180,220 224,242 180,264 136,242"/>
+      <polygon points="298,254 354,282 298,310 242,282"/>
+      <polygon points="396,191 426,206 396,221 366,206"/>
+      <polygon points="186,322 230,344 186,366 142,344"/>
+      <polygon points="430,289 460,304 430,319 400,304"/>
+      <polygon points="430,398 502,434 430,470 358,434"/>
+    </g>
+    <!-- mountain + cabin -->
+    <g id="mountain">
+      <polygon points="112,60 92,98 140,100" fill="#252B33"/>
+      <polygon points="84,36 46,100 120,98" fill="#39414B"/>
+      <polygon points="84,36 66,72 90,64" fill="#596270"/>
+      <line x1="104" y1="96" x2="140" y2="132" stroke="#39414B" stroke-dasharray="3 3"/>
+      <g id="cabin">
+        <rect x="110" y="88" width="14" height="10" rx="1" fill="#39414B"/>
+        <polygon points="108,88 117,81 126,88" fill="#596270"/>
+      </g>
+    </g>
+    <!-- dam -->
+    <g id="dam">
+      <path d="M116,128 L156,148 L156,162 L116,142 Z" fill="url(#metalGrad)"/>
+      <rect x="132" y="137" width="6" height="11" rx="1" fill="#171C24"/>
+    </g>
+    <!-- pipe network dam -> factory -->
+    <g id="pipes">
+      <line x1="138" y1="140" x2="204" y2="173" stroke="#20242A" stroke-width="8"/>
+      <line x1="138" y1="140" x2="204" y2="173" stroke="#39414B" stroke-width="5"/>
+      <line x1="140" y1="150" x2="206" y2="183" stroke="#20242A" stroke-width="14"/>
+      <line x1="140" y1="150" x2="206" y2="183" stroke="#39414B" stroke-width="10"/>
+      <line x1="162" y1="162" x2="162" y2="176" stroke="#252B33" stroke-width="3"/>
+      <line x1="186" y1="174" x2="186" y2="188" stroke="#252B33" stroke-width="3"/>
+    </g>
+    <!-- CI factory -->
+    <g id="factory">
+      <rect x="234" y="128" width="8" height="22" rx="1" fill="#39414B"/>
+      <ellipse cx="238" cy="128" rx="4" ry="2" fill="#596270"/>
+      <polygon points="230,158 264,175 264,201 230,184" fill="#39414B"/>
+      <polygon points="284,165 264,175 264,201 284,191" fill="#252B33"/>
+      <polygon points="250,148 284,165 264,175 230,158" fill="#596270"/>
+      <polygon points="270,178 278,174 278,188 270,192" fill="#171C24"/>
+    </g>
+    <!-- registry warehouse -->
+    <g id="registry">
+      <polygon points="154,232 196,253 196,273 154,252" fill="#39414B"/>
+      <polygon points="220,241 196,253 196,273 220,261" fill="#252B33"/>
+      <polygon points="178,220 220,241 196,253 154,232" fill="#596270"/>
+      <line x1="166" y1="226" x2="208" y2="247"/>
+      <polygon points="204,252 214,247 214,261 204,266" fill="#171C24"/>
+      <line x1="164" y1="244" x2="164" y2="262" stroke="#252B33"/>
+      <line x1="176" y1="250" x2="176" y2="268" stroke="#252B33"/>
+      <rect x="150" y="258" width="8" height="5" rx="1" fill="#FF8F1F"/>
+      <rect x="160" y="262" width="8" height="5" rx="1" fill="#4FC3F7"/>
+      <rect x="155" y="252" width="8" height="5" rx="1" fill="#39414B"/>
+    </g>
+    <!-- harbor -->
+    <g id="harbor">
+      <g id="ship-1">
+        <polygon points="276,278 292,278 289,284 279,284" fill="#39414B"/>
+        <rect x="286" y="274" width="4" height="4" rx="1" fill="#596270"/>
+        <rect x="279" y="274" width="5" height="4" rx="1" fill="#FF8F1F"/>
+      </g>
+      <g id="ship-2">
+        <polygon points="306,290 320,290 317,295 308,295" fill="#39414B"/>
+        <rect x="310" y="286" width="5" height="4" rx="1" fill="#4FC3F7"/>
+      </g>
+      <g id="crane">
+        <rect x="328" y="244" width="4" height="18" rx="1" fill="#39414B"/>
+        <line x1="330" y1="246" x2="346" y2="254" stroke="#596270"/>
+        <line x1="342" y1="252" x2="342" y2="258" stroke="#252B33"/>
+        <rect x="339" y="258" width="6" height="4" rx="1" fill="#FF8F1F"/>
+      </g>
+      <g id="lighthouse">
+        <rect x="252" y="248" width="7" height="16" rx="2" fill="url(#metalGrad)"/>
+      </g>
+    </g>
+    <!-- monitoring tower + log tube -->
+    <g id="monitoring">
+      <path d="M350,284 C372,268 388,244 394,212" stroke="#39414B" stroke-width="4"/>
+      <rect x="392" y="158" width="9" height="48" rx="2" fill="url(#metalGrad)"/>
+      <rect x="386" y="150" width="21" height="11" rx="2" fill="#39414B"/>
+      <rect x="389" y="153" width="15" height="5" rx="1" fill="#171C24"/>
+      <line x1="396" y1="150" x2="396" y2="141" stroke="#252B33"/>
+    </g>
+    <!-- database silos -->
+    <g id="database">
+      <line x1="159" y1="344" x2="185" y2="354" stroke="#252B33" stroke-width="3"/>
+      <line x1="185" y1="354" x2="211" y2="364" stroke="#252B33" stroke-width="3"/>
+      <g id="silo-1">
+        <rect x="150" y="318" width="18" height="24" rx="3" fill="url(#metalGrad)"/>
+        <ellipse cx="159" cy="318" rx="9" ry="4" fill="#596270"/>
+      </g>
+      <g id="silo-2">
+        <rect x="176" y="328" width="18" height="24" rx="3" fill="url(#metalGrad)"/>
+        <ellipse cx="185" cy="328" rx="9" ry="4" fill="#596270"/>
+      </g>
+      <g id="silo-3">
+        <rect x="202" y="338" width="18" height="24" rx="3" fill="url(#metalGrad)"/>
+        <ellipse cx="211" cy="338" rx="9" ry="4" fill="#596270"/>
+      </g>
+    </g>
+    <!-- cloud platform -->
+    <g id="cloud">
+      <line x1="404" y1="262" x2="410" y2="296" stroke="#252B33" stroke-width="3"/>
+      <line x1="430" y1="278" x2="430" y2="302" stroke="#252B33" stroke-width="3"/>
+      <line x1="456" y1="262" x2="450" y2="296" stroke="#252B33" stroke-width="3"/>
+      <polygon points="392,255 430,274 430,280 392,261" fill="#252B33"/>
+      <polygon points="468,255 430,274 430,280 468,261" fill="#252B33"/>
+      <polygon points="430,236 468,255 430,274 392,255" fill="#39414B"/>
+      <line x1="416" y1="246" x2="416" y2="230" stroke="#596270"/>
+      <line x1="411" y1="234" x2="421" y2="234" stroke="#596270"/>
+      <line x1="444" y1="254" x2="444" y2="240" stroke="#596270"/>
+      <line x1="416" y1="232" x2="444" y2="241" stroke="#596270"/>
+      <rect x="424" y="248" width="10" height="8" rx="1" fill="#39414B"/>
+      <path id="cloud-feed" d="M436,312 C440,340 436,372 428,398" stroke="#596270" stroke-dasharray="3 4" opacity="0.6"/>
+    </g>
+    <!-- security perimeter + gate -->
+    <g id="security">
+      <line x1="337" y1="370" x2="353" y2="378" stroke="#596270"/>
+      <line x1="401" y1="406" x2="417" y2="414" stroke="#596270"/>
+      <rect x="336" y="368" width="3" height="10" fill="#39414B"/>
+      <rect x="352" y="376" width="3" height="10" fill="#39414B"/>
+      <rect x="400" y="404" width="3" height="10" fill="#39414B"/>
+      <rect x="416" y="412" width="3" height="10" fill="#39414B"/>
+      <g id="gate">
+        <rect x="368" y="388" width="4" height="14" rx="1" fill="url(#metalGrad)"/>
+        <rect x="386" y="396" width="4" height="14" rx="1" fill="url(#metalGrad)"/>
+        <line x1="370" y1="389" x2="388" y2="397" stroke="#39414B" stroke-width="3"/>
+      </g>
+    </g>
+    <!-- production city -->
+    <g id="city">
+      <g id="tower-1">
+        <polygon points="396,394 414,403 414,439 396,430" fill="#39414B"/>
+        <polygon points="426,397 414,403 414,439 426,433" fill="#252B33"/>
+        <polygon points="408,388 426,397 414,403 396,394" fill="#596270"/>
+        <line x1="408" y1="388" x2="408" y2="379" stroke="#252B33"/>
+      </g>
+      <g id="tower-2">
+        <polygon points="428,409 444,417 444,445 428,437" fill="#39414B"/>
+        <polygon points="454,412 444,417 444,445 454,440" fill="#252B33"/>
+        <polygon points="438,404 454,412 444,417 428,409" fill="#596270"/>
+      </g>
+      <g id="tower-3">
+        <polygon points="455,425 469,432 469,452 455,445" fill="#39414B"/>
+        <polygon points="478,427 469,432 469,452 478,447" fill="#252B33"/>
+        <polygon points="464,420 478,427 469,432 455,425" fill="#596270"/>
+      </g>
+      <g id="tower-4">
+        <polygon points="381,425 394,431 394,447 381,441" fill="#39414B"/>
+        <polygon points="403,426 394,431 394,447 403,442" fill="#252B33"/>
+        <polygon points="390,420 403,426 394,431 381,425" fill="#596270"/>
+      </g>
+      <g id="tower-5">
+        <polygon points="412,437 427,444 427,466 412,459" fill="#39414B"/>
+        <polygon points="437,439 427,444 427,466 437,461" fill="#252B33"/>
+        <polygon points="422,432 437,439 427,444 412,437" fill="#596270"/>
+      </g>
+      <g id="tower-6">
+        <polygon points="444,448 456,454 456,468 444,462" fill="#39414B"/>
+        <polygon points="464,450 456,454 456,468 464,464" fill="#252B33"/>
+        <polygon points="452,444 464,450 456,454 444,448" fill="#596270"/>
+      </g>
+    </g>
+  </g>
+
+  <g id="glass">
+    <rect x="114" y="91" width="4" height="4" fill="#6CD8FF" stroke-width="1"/>
+    <line x1="140" y1="150" x2="206" y2="183" stroke="#6CD8FF" stroke-width="5" opacity="0.35"/>
+    <polygon points="236,166 256,176 256,182 236,172" fill="url(#glassGrad)" stroke-width="1"/>
+    <path d="M350,284 C372,268 388,244 394,212" stroke="#6CD8FF" stroke-width="2" opacity="0.3"/>
+    <rect x="156" y="326" width="6" height="9" rx="1" fill="#4FC3F7" opacity="0.85" stroke-width="1"/>
+    <rect x="182" y="336" width="6" height="9" rx="1" fill="#4FC3F7" opacity="0.85" stroke-width="1"/>
+    <rect x="208" y="346" width="6" height="9" rx="1" fill="#4FC3F7" opacity="0.85" stroke-width="1"/>
+  </g>
+
+  <g id="water" filter="url(#glow)">
+    <polygon id="water-reservoir" points="90,100 122,122 112,134 82,112" fill="#00CFFF" opacity="0.45" stroke="none"/>
+    <path id="water-fall" d="M88,62 C90,76 91,88 93,102" stroke="#00CFFF" stroke-width="4"/>
+    <path id="water-pipe" d="M142,152 L204,183" stroke="#00CFFF" stroke-width="3"/>
+    <path id="water-valley" d="M210,188 C190,206 178,216 190,236 C200,252 230,262 250,274" stroke="#00CFFF" stroke-width="6" opacity="0.9"/>
+    <polygon id="water-basin" points="298,258 346,282 298,306 250,282" fill="#00CFFF" opacity="0.3"/>
+    <path id="water-wake-1" d="M272,281 q-6,2 -11,1" stroke="#00CFFF" stroke-width="1.5" opacity="0.6"/>
+    <path id="water-wake-2" d="M304,293 q-5,2 -9,1" stroke="#00CFFF" stroke-width="1.5" opacity="0.6"/>
+    <path id="water-db" d="M296,306 C270,320 248,330 230,340" stroke="#00CFFF" stroke-width="6" opacity="0.9"/>
+    <path id="water-replication" d="M162,346 L208,364" stroke="#4FC3F7" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+    <path id="water-security" d="M228,350 C260,364 300,372 336,388 L378,405" stroke="#00CFFF" stroke-width="6" opacity="0.9"/>
+    <path id="water-city" d="M378,405 C388,410 396,414 404,418" stroke="#00CFFF" stroke-width="6" opacity="0.9"/>
+    <ellipse id="water-pool" cx="400" cy="419" rx="10" ry="4" fill="#00CFFF" opacity="0.35" stroke="none"/>
+  </g>
+
+  <g id="lights" filter="url(#glow)" stroke="none">
+    <circle id="led-cabin" cx="116" cy="93" r="3" fill="#6CD8FF" opacity="0.7"/>
+    <line id="led-dam" x1="135" y1="139" x2="135" y2="146" stroke="#00CFFF" stroke-width="2"/>
+    <circle id="led-factory" cx="274" cy="175" r="2" fill="#FF8F1F"/>
+    <line id="led-registry" x1="205" y1="250" x2="213" y2="246" stroke="#FF8F1F" stroke-width="2"/>
+    <circle id="led-ship-1" cx="277" cy="277" r="1.5" fill="#2EE66B"/>
+    <circle id="led-ship-2" cx="319" cy="289" r="1.5" fill="#2EE66B"/>
+    <polygon id="beam" points="255,246 287,236 287,252" fill="#F4B740" opacity="0.15"/>
+    <circle id="led-lighthouse" cx="255" cy="246" r="3" fill="#F4B740"/>
+    <rect id="screen-monitoring" x="390" y="154" width="13" height="3" fill="#2EE66B" opacity="0.85"/>
+    <circle id="led-beacon" cx="396" cy="140" r="2" fill="#FF5A5A"/>
+    <circle id="log-capsule-1" cx="366" cy="270" r="2.5" fill="#B388FF"/>
+    <circle id="log-capsule-2" cx="388" cy="238" r="2.5" fill="#B388FF"/>
+    <circle id="led-silo-1" cx="164" cy="324" r="1.5" fill="#2EE66B"/>
+    <circle id="led-silo-2" cx="190" cy="334" r="1.5" fill="#2EE66B"/>
+    <circle id="led-silo-3" cx="216" cy="344" r="1.5" fill="#2EE66B"/>
+    <circle id="led-cloud-1" cx="416" cy="229" r="2" fill="#6CD8FF"/>
+    <circle id="led-cloud-2" cx="444" cy="239" r="2" fill="#6CD8FF"/>
+    <ellipse id="glow-cloud" cx="430" cy="302" rx="22" ry="7" fill="#6CD8FF" opacity="0.12"/>
+    <circle id="led-gate" cx="379" cy="392" r="2" fill="#F4B740"/>
+    <line id="scan-gate" x1="371" y1="400" x2="387" y2="408" stroke="#FF5A5A" stroke-width="1.5" opacity="0.8"/>
+    <circle id="led-city-antenna" cx="408" cy="378" r="1.5" fill="#FF5A5A"/>
+    <g id="city-windows" fill="#F4B740" opacity="0.9">
+      <rect x="417" y="408" width="3" height="2.5"/>
+      <rect x="421" y="414" width="3" height="2.5"/>
+      <rect x="417" y="420" width="3" height="2.5" fill="#6CD8FF"/>
+      <rect x="421" y="426" width="3" height="2.5"/>
+      <rect x="400" y="410" width="3" height="2.5"/>
+      <rect x="404" y="418" width="3" height="2.5" fill="#6CD8FF"/>
+      <rect x="446" y="422" width="3" height="2.5"/>
+      <rect x="450" y="428" width="3" height="2.5" fill="#6CD8FF"/>
+      <rect x="432" y="420" width="3" height="2.5"/>
+      <rect x="446" y="434" width="3" height="2.5"/>
+      <rect x="471" y="436" width="3" height="2.5"/>
+      <rect x="458" y="432" width="3" height="2.5" fill="#6CD8FF"/>
+      <rect x="396" y="434" width="3" height="2.5"/>
+      <rect x="384" y="432" width="3" height="2.5"/>
+      <rect x="430" y="448" width="3" height="2.5"/>
+      <rect x="433" y="454" width="3" height="2.5" fill="#6CD8FF"/>
+      <rect x="416" y="444" width="3" height="2.5"/>
+      <rect x="458" y="458" width="3" height="2.5"/>
+    </g>
+  </g>
+
+  <g id="bolts">
+    <use href="#bolt" x="124" y="138"/>
+    <use href="#bolt" x="150" y="152"/>
+    <use href="#bolt" x="280" y="186"/>
+    <use href="#bolt" x="216" y="256"/>
+    <use href="#bolt" x="330" y="260"/>
+    <use href="#bolt" x="370" y="392"/>
+  </g>
+
+  <g id="overlay" stroke="none">
+    <circle id="steam-1" cx="240" cy="120" r="4" fill="#596270" opacity="0.25"/>
+    <circle id="steam-2" cx="246" cy="111" r="5" fill="#596270" opacity="0.18"/>
+    <ellipse id="fog-1" cx="118" cy="122" rx="36" ry="8" fill="#171C24" opacity="0.3"/>
+    <ellipse id="fog-2" cx="252" cy="300" rx="48" ry="9" fill="#171C24" opacity="0.25"/>
+    <ellipse id="fog-3" cx="380" cy="330" rx="40" ry="8" fill="#171C24" opacity="0.22"/>
+  </g>
+</svg>

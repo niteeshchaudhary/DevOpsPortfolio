@@ -1,0 +1,389 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6470"/>
+      <stop offset=".5" stop-color="#3C434D"/>
+      <stop offset="1" stop-color="#262C34"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#00B4FF" stop-opacity=".2"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="cbox">
+      <polygon points="0,0 14,-7 42,7 28,14" fill="currentColor"/>
+      <polygon points="0,0 14,-7 42,7 28,14" fill="rgba(255,255,255,0.30)" opacity=".55" stroke="none"/>
+      <polygon points="0,0 28,14 28,28 0,14" fill="currentColor"/>
+      <polygon points="28,14 42,7 42,21 28,28" fill="currentColor"/>
+      <polygon points="28,14 42,7 42,21 28,28" fill="rgba(0,0,0,0.35)" stroke="none"/>
+      <line x1="9" y1="5" x2="9" y2="19" opacity=".55"/>
+      <line x1="19" y1="10" x2="19" y2="24" opacity=".55"/>
+    </g>
+    <g id="bolt">
+      <circle r="4" fill="#596270"/>
+      <circle r="2" fill="#20242A" stroke="none"/>
+      <circle cx="-1.2" cy="-1.2" r=".9" fill="rgba(255,255,255,0.30)" stroke="none"/>
+    </g>
+  </defs>
+
+  <g id="shadow" fill="rgba(0,0,0,0.35)" stroke="none">
+    <polygon points="190,220 350,300 350,310 190,230"/>
+    <polygon points="350,300 510,220 510,230 350,310"/>
+    <polygon points="100,239 276,327 311,331 303,342 268,336 96,251"/>
+    <ellipse cx="58" cy="406" rx="46" ry="9"/>
+    <ellipse cx="144" cy="451" rx="10" ry="3"/>
+    <ellipse cx="360" cy="431" rx="10" ry="3"/>
+    <ellipse cx="456" cy="315" rx="10" ry="3"/>
+  </g>
+
+  <g id="metal">
+    <g id="quay">
+      <polygon points="188,190 348,270 348,296 188,216" fill="url(#metalGrad)"/>
+      <polygon points="348,270 508,190 508,216 348,296" fill="#252B33"/>
+      <polygon points="508,190 348,110 188,190 348,270" fill="#171C24"/>
+      <line x1="260" y1="160" x2="412" y2="236" opacity=".6"/>
+      <line x1="232" y1="178" x2="380" y2="252" opacity=".6"/>
+      <polygon points="212,202 224,208 226,204 214,198" fill="#F4B740"/>
+      <polygon points="252,222 264,228 266,224 254,218" fill="#F4B740"/>
+      <polygon points="292,242 304,248 306,244 294,238" fill="#F4B740"/>
+      <circle cx="201" cy="196" r="3" fill="#252B33"/>
+    </g>
+    <g id="tower">
+      <polygon points="404,68 424,78 424,174 404,164" fill="url(#metalGrad)"/>
+      <polygon points="424,78 444,68 444,164 424,174" fill="#252B33"/>
+      <polygon points="404,68 424,58 444,68 424,78" fill="#596270"/>
+      <polygon id="door" points="410,152 418,156 418,172 410,168" fill="#171C24"/>
+      <polygon points="394,38 424,53 424,73 394,58" fill="url(#metalGrad)"/>
+      <polygon points="424,53 454,38 454,58 424,73" fill="#252B33"/>
+      <polygon points="394,38 424,23 454,38 424,53" fill="#596270"/>
+      <g id="radar">
+        <animateTransform attributeName="transform" type="rotate" values="0 424 23;360 424 23" dur="6s" repeatCount="indefinite"/>
+        <line x1="424" y1="38" x2="424" y2="26"/>
+        <ellipse cx="424" cy="23" rx="7" ry="3" fill="#596270"/>
+      </g>
+      <line x1="438" y1="31" x2="438" y2="8"/>
+    </g>
+    <g id="quay-stacks">
+      <use href="#cbox" x="384" y="202" color="#B388FF"/>
+      <use href="#cbox" x="368" y="210" color="#4FC3F7"/>
+      <use href="#cbox" x="368" y="182" color="#FF8F1F"/>
+      <use href="#cbox" x="352" y="218" color="#FF8F1F"/>
+      <use href="#cbox" x="352" y="190" color="#2EE66B"/>
+    </g>
+    <g id="dock-lamps">
+      <rect x="253" y="184" width="6" height="38" rx="2" fill="#39414B"/>
+      <rect x="243" y="182" width="14" height="5" rx="2" fill="#39414B"/>
+      <rect x="240" y="187" width="10" height="6" rx="2" fill="#252B33"/>
+      <rect x="309" y="214" width="6" height="38" rx="2" fill="#39414B"/>
+      <rect x="299" y="212" width="14" height="5" rx="2" fill="#39414B"/>
+      <rect x="296" y="217" width="10" height="6" rx="2" fill="#252B33"/>
+    </g>
+    <g id="ship-2">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0; 0,3; 0,0" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="4.2s" begin="-1.4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" additive="sum" values="-1.4 53 410; 1.4 53 410; -1.4 53 410; 1.4 53 410; -1.4 53 410" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="5.2s" begin="-2s" repeatCount="indefinite"/>
+      <polygon points="4,366 72,400 102,392 102,406 72,414 4,380" fill="#252B33"/>
+      <polygon points="18,352 86,386 102,392 72,400 4,366" fill="#39414B"/>
+      <polygon points="30,338 44,345 44,363 30,356" fill="#39414B"/>
+      <polygon points="44,345 58,338 58,356 44,363" fill="#252B33"/>
+      <polygon points="30,338 44,331 58,338 44,345" fill="#596270"/>
+    </g>
+    <g id="ship-1">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0; 0,4; 0,0" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" additive="sum" values="-1.1 200 320; 1.1 200 320; -1.1 200 320; 1.1 200 320; -1.1 200 320" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="6s" repeatCount="indefinite"/>
+      <polygon points="94,215 270,303 305,307 305,325 270,321 94,233" fill="#252B33"/>
+      <polygon points="120,202 94,215 94,233 120,220" fill="url(#metalGrad)"/>
+      <polygon points="120,202 296,290 305,307 270,303 94,215" fill="#39414B"/>
+      <polygon points="100,180 116,188 116,214 100,206" fill="#39414B"/>
+      <polygon points="116,188 130,181 130,207 116,214" fill="#252B33"/>
+      <polygon points="100,180 114,173 130,181 116,188" fill="#596270"/>
+      <line x1="112" y1="176" x2="112" y2="156"/>
+      <use href="#cbox" x="130" y="200" color="#FF8F1F"/>
+      <use href="#cbox" x="120" y="210" color="#4FC3F7"/>
+      <use href="#cbox" x="168" y="220" color="#B388FF"/>
+      <use href="#cbox" x="168" y="205" color="#F00"/>
+      <use href="#cbox" x="212" y="242" color="#4FC3F7"/>
+    </g>
+    <path d="M122,206 Q160,216 200,198"/>
+    <g id="buoys">
+      <polygon points="131,448 149,448 145,432 135,432" fill="#252B33"/>
+      <rect x="138" y="425" width="4" height="8" fill="#39414B"/>
+      <polygon points="347,428 365,428 361,412 351,412" fill="#252B33"/>
+      <rect x="354" y="405" width="4" height="8" fill="#39414B"/>
+      <polygon points="443,312 461,312 457,296 447,296" fill="#252B33"/>
+      <rect x="450" y="289" width="4" height="8" fill="#39414B"/>
+    </g>
+    <g id="crane">
+        <!-- FIXED BASE TOWER -->
+        <rect x="278" y="232" width="20" height="8" rx="2" fill="#252B33"/>
+        <rect x="312" y="244" width="20" height="8" rx="2" fill="#252B33"/>
+        <rect x="284" y="162" width="8" height="74" fill="#39414B"/>
+        <rect x="320" y="146" width="8" height="102" fill="#39414B"/>
+        <line x1="288" y1="204" x2="324" y2="218"/>
+        <line x1="288" y1="226" x2="324" y2="196"/>
+        <rect x="330" y="114" width="26" height="18" rx="2" fill="url(#metalGrad)"/>
+        <g id="tower-lights">
+          <circle cx="336" cy="120" r="2" fill="#FF5A5A" filter="url(#glow)"><animate attributeName="opacity" values="1;0.15;1" dur="1.2s" repeatCount="indefinite"/></circle>
+          <circle cx="350" cy="120" r="2" fill="#FF5A5A" filter="url(#glow)"><animate attributeName="opacity" values="1;0.15;1" dur="1.2s" begin="-0.6s" repeatCount="indefinite"/></circle>
+          <circle cx="343" cy="128" r="1.5" fill="#F4B740" filter="url(#glow)"><animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
+        </g>
+
+        <!-- ROTATING BOOM + TROLLEY + HOOK -->
+        <g id="boom-arm">
+          <animateTransform attributeName="transform" type="rotate" values="
+            -12 306 154;
+            -12 306 154;
+            -2 306 154;
+            22 306 154;
+            22 306 154;
+            22 306 154;
+            2 306 154;
+            -12 306 154;
+            -12 306 154
+          " keyTimes="0;0.12;0.25;0.4;0.55;0.7;0.85;0.92;1" dur="14s" repeatCount="indefinite"/>
+          <!-- Boom polygons -->
+          <polygon points="352,126 190,207 190,217 352,136" fill="url(#metalGrad)"/>
+          <polygon points="352,126 190,207 190,210 352,129" fill="#596270" stroke="none"/>
+          <!-- Trolley on boom -->
+          <g id="trolley">
+            <animateTransform attributeName="transform" type="translate" values="
+              0,0;
+              0,0;
+              0,0;
+              -50,15;
+              -70,20;
+              -80,20;
+              -50,10;
+              0,0;
+              0,0
+            " keyTimes="0;0.12;0.25;0.4;0.55;0.7;0.85;0.92;1" dur="14s" repeatCount="indefinite"/>
+            <polygon points="266,176 290,164 290,174 266,186" fill="#252B33"/>
+            <!-- Hook hanging from trolley -->
+            <g id="hook">
+              <animateTransform attributeName="transform" type="translate" values="
+                0,10;
+                0,10;
+                0,0;
+                0,0;
+                0,0;
+                0,0;
+                0,0;
+                0,0;
+                0,0
+              " keyTimes="0;0.12;0.25;0.4;0.55;0.7;0.85;0.92;1" dur="10s" repeatCount="indefinite"/>
+              <line x1="272" y1="183" x2="270" y2="212"/>
+              <line x1="284" y1="177" x2="286" y2="212"/>
+              <rect x="264" y="212" width="28" height="6" rx="2" fill="#F4B740"/>
+              <use href="#cbox" x="258" y="226" color="#F00"/>
+            </g>
+          </g>
+        </g>
+    </g>
+  </g>
+
+  <g id="glass">
+    <g id="screen">
+      <polygon points="398,43 420,54 420,64 398,53" fill="url(#glassGrad)"/>
+      <polygon points="428,54 450,43 450,53 428,64" fill="url(#glassGrad)"/>
+    </g>
+    <rect id="crane-glass" x="333" y="118" width="9" height="7" rx="1" fill="url(#glassGrad)"/>
+    <polygon id="ship-1-glass" points="118,190 128,185 128,193 118,198" fill="url(#glassGrad)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0; 0,4; 0,0" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" additive="sum" values="-1.1 200 320; 1.1 200 320; -1.1 200 320; 1.1 200 320; -1.1 200 320" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="6s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon id="ship-2-glass" points="46,347 56,342 56,349 46,354" fill="url(#glassGrad)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0; 0,3; 0,0" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="4.2s" begin="-1.4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" additive="sum" values="-1.4 53 410; 1.4 53 410; -1.4 53 410; 1.4 53 410; -1.4 53 410" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1" dur="5.2s" begin="-2s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <g id="water" stroke="none">
+    <ellipse cx="54" cy="272" rx="40" ry="12" fill="#00CFFF" opacity=".12" filter="url(#glow)">
+      <animate attributeName="ry" values="12;15;12" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".10;.22;.10" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="220" cy="438" rx="95" ry="22" fill="#00CFFF" opacity=".1" filter="url(#glow)">
+      <animate attributeName="ry" values="22;25;22" dur="5s" begin="-1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".08;.20;.08" dur="5s" begin="-1.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="420" cy="370" rx="75" ry="18" fill="#00CFFF" opacity=".12" filter="url(#glow)">
+      <animate attributeName="ry" values="18;21;18" dur="5.5s" begin="-2.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".10;.22;.10" dur="5.5s" begin="-2.6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="330" cy="480" rx="110" ry="20" fill="#00CFFF" opacity=".08" filter="url(#glow)">
+      <animate attributeName="ry" values="20;23;20" dur="6s" begin="-3.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".06;.16;.06" dur="6s" begin="-3.3s" repeatCount="indefinite"/>
+    </ellipse>
+    <path d="M94,233 L270,321 L305,325" stroke="#00CFFF" stroke-width="2.5" opacity=".8" filter="url(#glow)"/>
+    <path d="M4,380 L72,414 L102,406" stroke="#00CFFF" stroke-width="2" opacity=".7" filter="url(#glow)"/>
+    <path d="M188,216 L348,296 L508,216" stroke="#00CFFF" stroke-width="2" opacity=".5" filter="url(#glow)"/>
+    <g id="routes" stroke="#00CFFF" fill="none">
+      <path d="M308,326 Q380,362 500,408" stroke-width="2.5" opacity=".45" stroke-dasharray="10 8" filter="url(#glow)"/>
+      <path d="M88,244 Q58,300 48,346" stroke-width="2" opacity=".35" stroke-dasharray="8 8"/>
+    </g>
+    <g id="ripples" fill="none" stroke="#00CFFF" stroke-width="1.5" filter="url(#glow)">
+      <!-- ship-1 stern waterline -->
+      <ellipse cx="104" cy="240" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;18" dur="3.4s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;6" dur="3.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3.4s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="104" cy="240" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;18" dur="3.4s" begin="-1.7s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;6" dur="3.4s" begin="-1.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3.4s" begin="-1.7s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- ship-1 bow waterline -->
+      <ellipse cx="300" cy="332" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;18" dur="3.4s" begin="-0.7s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;6" dur="3.4s" begin="-0.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3.4s" begin="-0.7s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="300" cy="332" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;18" dur="3.4s" begin="-2.4s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;6" dur="3.4s" begin="-2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3.4s" begin="-2.4s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- ship-2 waterline -->
+      <ellipse cx="52" cy="410" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;14" dur="3s" begin="-0.4s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5" dur="3s" begin="-0.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3s" begin="-0.4s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="52" cy="410" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;14" dur="3s" begin="-1.9s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5" dur="3s" begin="-1.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3s" begin="-1.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- buoy ripples -->
+      <ellipse cx="140" cy="450" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;14" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="140" cy="450" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;14" dur="3s" begin="-1.5s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5" dur="3s" begin="-1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3s" begin="-1.5s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="356" cy="430" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;14" dur="3.2s" begin="-0.9s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5" dur="3.2s" begin="-0.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3.2s" begin="-0.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="356" cy="430" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;14" dur="3.2s" begin="-2.5s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5" dur="3.2s" begin="-2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="3.2s" begin="-2.5s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="452" cy="314" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;12" dur="2.8s" begin="-0.3s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;4.5" dur="2.8s" begin="-0.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="2.8s" begin="-0.3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="452" cy="314" rx="2" ry="1" opacity=".7">
+        <animate attributeName="rx" values="2;12" dur="2.8s" begin="-1.7s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;4.5" dur="2.8s" begin="-1.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".7;0" dur="2.8s" begin="-1.7s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- ambient open-water ripples -->
+      <ellipse cx="260" cy="418" rx="2" ry="1" opacity=".6">
+        <animate attributeName="rx" values="2;16" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5.5" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".6;0" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="430" cy="395" rx="2" ry="1" opacity=".6">
+        <animate attributeName="rx" values="2;16" dur="3.6s" begin="-2.6s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="1;5.5" dur="3.6s" begin="-2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".6;0" dur="3.6s" begin="-2.6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <g id="waves" stroke="#00CFFF" stroke-width="2" opacity=".35" fill="none">
+        <animate attributeName="opacity" values=".35;.55;.35" dur="3s" repeatCount="indefinite"/>
+        <path d="M36,300 q10,5 20,0"/>
+      <path d="M60,250 q10,5 20,0"/>
+      <path d="M150,470 q12,5 24,0"/>
+      <path d="M260,420 q12,5 24,0"/>
+      <path d="M420,340 q12,5 24,0"/>
+      <path d="M470,430 q12,5 24,0"/>
+      <path d="M320,470 q12,5 24,0"/>
+      <path d="M30,440 q10,5 20,0"/>
+    </g>
+    <g id="reflections" stroke-width="2" fill="none">
+      <line x1="140" y1="458" x2="140" y2="472" stroke="#2EE66B" opacity=".3"><animate attributeName="opacity" values=".3;.6;.3" dur="2.4s" repeatCount="indefinite"/></line>
+      <line x1="356" y1="438" x2="356" y2="452" stroke="#FF5A5A" opacity=".3"><animate attributeName="opacity" values=".3;.6;.3" dur="2s" begin="-0.5s" repeatCount="indefinite"/></line>
+      <line x1="452" y1="322" x2="452" y2="336" stroke="#2EE66B" opacity=".3"><animate attributeName="opacity" values=".3;.6;.3" dur="2.6s" begin="-1s" repeatCount="indefinite"/></line>
+      <line x1="256" y1="254" x2="256" y2="266" stroke="#F4B740" opacity=".3"><animate attributeName="opacity" values=".3;.6;.3" dur="2.2s" begin="-0.3s" repeatCount="indefinite"/></line>
+      <line x1="312" y1="282" x2="312" y2="294" stroke="#F4B740" opacity=".3"><animate attributeName="opacity" values=".3;.6;.3" dur="2.8s" begin="-0.9s" repeatCount="indefinite"/></line>
+    </g>
+  </g>
+
+  <g id="lights" stroke="none">
+    <circle cx="438" cy="6" r="3" fill="#FF5A5A" filter="url(#glow)"/>
+    <circle cx="430" cy="21" r="1.8" fill="#2EE66B" filter="url(#glow)"/>
+    <circle cx="398" cy="62" r="2" fill="#F4B740" filter="url(#glow)"/>
+    <circle cx="450" cy="62" r="2" fill="#F4B740" filter="url(#glow)"/>
+    <rect x="409" y="96" width="5" height="8" rx="1" fill="#6CD8FF" opacity=".85"/>
+    <rect x="409" y="118" width="5" height="8" rx="1" fill="#6CD8FF" opacity=".85"/>
+    <rect x="429" y="100" width="5" height="8" rx="1" fill="#6CD8FF" opacity=".85"/>
+    <rect x="437" y="124" width="5" height="8" rx="1" fill="#6CD8FF" opacity=".85"/>
+    <circle cx="343" cy="110" r="3" fill="#F4B740" filter="url(#glow)"/>
+    <circle id="trolley-led" cx="286" cy="166" r="2" fill="#2EE66B" filter="url(#glow)">
+        <animate attributeName="opacity" values="1;0.15;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+    <circle cx="245" cy="190" r="3" fill="#F4B740" filter="url(#glow)"/>
+    <circle cx="301" cy="220" r="3" fill="#F4B740" filter="url(#glow)"/>
+    <ellipse cx="250" cy="214" rx="16" ry="5" fill="#F4B740" opacity=".12"/>
+    <ellipse cx="306" cy="244" rx="14" ry="5" fill="#F4B740" opacity=".12"/>
+    <g id="buoy-lights">
+      <circle cx="140" cy="423" r="3" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/></circle>
+      <circle cx="356" cy="403" r="3" fill="#FF5A5A" filter="url(#glow)"><animate attributeName="opacity" values="1;0.15;1" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="452" cy="287" r="3" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
+    </g>
+    <g id="pod-leds">
+      <circle cx="148" cy="221" r="1.8" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.1;1" dur="1.2s" repeatCount="indefinite"/></circle>
+      <circle cx="192" cy="243" r="1.8" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.1;1" dur="1.3s" begin="-0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="236" cy="265" r="1.8" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" begin="-0.8s" repeatCount="indefinite"/></circle>
+      <circle cx="192" cy="215" r="1.8" fill="#F4B740" filter="url(#glow)"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+      <circle cx="376" cy="241" r="1.8" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.15;1" dur="1.5s" begin="-0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="282" cy="249" r="1.8" fill="#F4B740" filter="url(#glow)"><animate attributeName="opacity" values="1;0.2;1" dur="1.7s" begin="-0.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <circle cx="112" cy="154" r="2" fill="#6CD8FF" filter="url(#glow)"/>
+    <circle cx="44" cy="328" r="2.5" fill="#F4B740" filter="url(#glow)"/>
+  </g>
+
+  <g id="bolts">
+    <use href="#bolt" x="240" y="228"/>
+    <use href="#bolt" x="310" y="264"/>
+    <use href="#bolt" x="420" y="246"/>
+    <use href="#bolt" x="288" y="222"/>
+    <use href="#bolt" x="324" y="230"/>
+    <use href="#bolt" x="414" y="158"/>
+    <use href="#bolt" x="350" y="124"/>
+    <use href="#bolt" x="106" y="224"/>
+  </g>
+
+  <g id="overlay" stroke="none">
+    <g id="cast-shadows" fill="rgba(0,0,0,0.35)">
+      <polygon points="424,176 444,166 478,184 458,194"/>
+      <polygon points="358,240 404,217 430,230 384,253"/>
+      <ellipse cx="296" cy="243" rx="11" ry="3.5"/>
+      <ellipse cx="330" cy="255" rx="11" ry="3.5"/>
+      <ellipse cx="262" cy="226" rx="9" ry="3"/>
+      <ellipse cx="318" cy="255" rx="9" ry="3"/>
+      <ellipse cx="288" cy="292" rx="12" ry="4"/>
+    </g>
+    <ellipse cx="120" cy="318" rx="110" ry="12" fill="rgba(255,255,255,0.30)" opacity=".06"/>
+    <ellipse cx="390" cy="332" rx="100" ry="10" fill="rgba(255,255,255,0.30)" opacity=".05"/>
+    <g id="rain" stroke="rgba(255,255,255,0.30)" stroke-width="2" opacity=".5">
+      <line x1="70" y1="40" x2="63" y2="62"/>
+      <line x1="150" y1="90" x2="143" y2="112"/>
+      <line x1="240" y1="30" x2="233" y2="52"/>
+      <line x1="330" y1="70" x2="323" y2="92"/>
+      <line x1="450" y1="110" x2="443" y2="132"/>
+      <line x1="30" y1="140" x2="23" y2="162"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <g id="bolt">
+      <circle cx="0" cy="0" r="3" fill="#2D3440" stroke="#1A1F26" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="#4D5664"/>
+    </g>
+  </defs>
+</svg>

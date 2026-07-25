@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A6D6" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00A6D6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00A6D6" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00A7D6" stop-opacity="0.3"/>
+      <stop offset="30%" stop-color="#00D5FF" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#00D5FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00A7D6" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="cyanGlowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D5FF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#00A7D6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00A7D6" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="greenGlowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FF44" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00FF44" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="redGlowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF4444" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF4444" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="amberGlowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F4B740" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#F4B740" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="amberGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+
+    <filter id="shadow-heavy" x="-50%" y="-50%" width="200%" height="250%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+    </filter>
+
+    <filter id="glow-cyan" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Reusable shapes -->
+    <g id="bolt">
+      <circle cx="0" cy="0" r="3" fill="#2D3440" stroke="#1A1F26" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="#4D5664"/>
+    </g>
+
+    <g id="bolt-4">
+      <use href="#bolt" x="-4" y="0"/>
+      <use href="#bolt" x="4" y="0"/>
+      <use href="#bolt" x="-4" y="8"/>
+      <use href="#bolt" x="4" y="8"/>
+    </g>
+
+    <g id="bolt-2">
+      <use href="#bolt" x="-6"/>
+      <use href="#bolt" x="6"/>
+    </g>
+
+    <!-- Panel -->
+    <g id="panel-metal">
+      <rect width="128" height="128" rx="8" fill="url(#metalGradient)"/>
+      <rect width="128" height="128" rx="8" fill="url(#highlightGradient)"/>
+    </g>
+  </defs>
+</svg>

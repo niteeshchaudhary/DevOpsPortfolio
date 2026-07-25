@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <rect x="12" y="52" width="40" height="4" rx="2" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Rack Frame -->
+  <g id="frame">
+    <rect x="16" y="8" width="32" height="48" rx="4" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="16" y="8" width="32" height="24" rx="4" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Vertical Rails -->
+  <g id="rails">
+    <rect x="18" y="10" width="2" height="44" rx="1" fill="#1A1F26"/>
+    <rect x="44" y="10" width="2" height="44" rx="1" fill="#1A1F26"/>
+  </g>
+  
+  <!-- Server Unit 1 -->
+  <g id="server1">
+    <rect x="20" y="12" width="24" height="6" rx="1" fill="#2D3440" stroke="#4D5664" stroke-width="1"/>
+    <circle cx="40" cy="15" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+    <circle cx="42" cy="15" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+  </g>
+  
+  <!-- Server Unit 2 -->
+  <g id="server2">
+    <rect x="20" y="20" width="24" height="6" rx="1" fill="#2D3440" stroke="#4D5664" stroke-width="1"/>
+    <circle cx="40" cy="23" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+    <circle cx="42" cy="23" r="1" fill="#00D5FF" filter="url(#cyanGlow)"/>
+  </g>
+  
+  <!-- Server Unit 3 -->
+  <g id="server3">
+    <rect x="20" y="28" width="24" height="6" rx="1" fill="#2D3440" stroke="#4D5664" stroke-width="1"/>
+    <circle cx="40" cy="31" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+    <circle cx="42" cy="31" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+  </g>
+  
+  <!-- Server Unit 4 -->
+  <g id="server4">
+    <rect x="20" y="36" width="24" height="6" rx="1" fill="#2D3440" stroke="#4D5664" stroke-width="1"/>
+    <circle cx="40" cy="39" r="1" fill="#FF4444" filter="url(#redGlow)"/>
+    <circle cx="42" cy="39" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+  </g>
+  
+  <!-- Server Unit 5 -->
+  <g id="server5">
+    <rect x="20" y="44" width="24" height="6" rx="1" fill="#2D3440" stroke="#4D5664" stroke-width="1"/>
+    <circle cx="40" cy="47" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+    <circle cx="42" cy="47" r="1" fill="#44FF44" filter="url(#greenGlow)"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="18" y="10"/>
+    <use href="#bolt" x="46" y="10"/>
+    <use href="#bolt" x="18" y="54"/>
+    <use href="#bolt" x="46" y="54"/>
+  </g>
+</svg>

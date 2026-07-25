@@ -1,0 +1,334 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" fill="none" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6470"/>
+      <stop offset="0.5" stop-color="#3C434D"/>
+      <stop offset="1" stop-color="#262C34"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.30)"/>
+      <stop offset="1" stop-color="rgba(0,180,255,0.20)"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="bolt">
+      <circle r="4" fill="#596270"/>
+      <circle r="1.8" fill="#20242A" stroke="none"/>
+      <circle cx="-1.2" cy="-1.2" r="0.9" fill="rgba(255,255,255,0.30)" stroke="none"/>
+    </g>
+  </defs>
+
+  <g id="shadow" fill="rgba(0,0,0,0.35)" stroke="none">
+    <polygon points="58,306 394,474 372,485 36,317"/>
+    <polygon points="18,296 76,325 104,311 46,282"/>
+    <polygon points="408,448 462,475 500,456 446,429"/>
+    <ellipse cx="308" cy="452" rx="22" ry="9"/>
+    <ellipse cx="154" cy="410" rx="15" ry="5"/>
+  </g>
+
+  <g id="metal">
+    <g id="building">
+      <polygon points="48,100 376,264 376,398 48,234" fill="#171C24"/>
+      <polygon points="376,264 440,232 440,366 376,398" fill="#252B33"/>
+      <polygon id="door" points="392,300 428,282 428,344 392,362" fill="#171C24"/>
+      <polygon points="48,100 376,264 440,232 112,68" fill="url(#metalGrad)"/>
+      <polygon points="48,100 376,264 376,274 48,110" fill="#39414B"/>
+      <rect x="116" y="134" width="8" height="136" fill="#252B33"/>
+      <rect x="188" y="172" width="8" height="136" fill="#252B33"/>
+      <rect x="260" y="208" width="8" height="136" fill="#252B33"/>
+      <rect x="332" y="244" width="8" height="136" fill="#252B33"/>
+      <ellipse cx="244" cy="162" rx="24" ry="12" fill="#252B33"/>
+      <path d="M220 162 L220 148 A24 12 0 0 1 268 148 L268 162" fill="#39414B"/>
+      <ellipse cx="244" cy="148" rx="24" ry="12" fill="url(#metalGrad)"/>
+      <g id="fan">
+        <animateTransform attributeName="transform" type="rotate" from="0 244 148" to="360 244 148" dur="2.2s" repeatCount="indefinite"/>
+        <ellipse cx="244" cy="148" rx="16" ry="3.5" fill="#596270"/>
+        <ellipse cx="244" cy="148" rx="16" ry="3.5" fill="#596270" transform="rotate(60 244 148)"/>
+        <ellipse cx="244" cy="148" rx="16" ry="3.5" fill="#596270" transform="rotate(120 244 148)"/>
+        <circle cx="244" cy="148" r="3.5" fill="#171C24"/>
+      </g>
+      <rect x="409" y="232" width="6" height="8" fill="#39414B"/>
+    </g>
+
+    <rect x="164" y="208" width="8" height="84" fill="#252B33"/>
+    <rect x="234" y="246" width="8" height="82" fill="#252B33"/>
+
+    <g id="conveyor">
+      <polygon points="64,240 400,408 374,421 38,253" fill="#252B33"/>
+      <g id="belt-treads">
+        <animateTransform attributeName="transform" type="translate" values="0,0;26,13" dur="1.3s" repeatCount="indefinite"/>
+        <line x1="104" y1="260" x2="78" y2="273"/>
+        <line x1="131" y1="274" x2="105" y2="287"/>
+        <line x1="175" y1="295" x2="149" y2="308"/>
+        <line x1="202" y1="309" x2="176" y2="322"/>
+        <line x1="249" y1="332" x2="223" y2="345"/>
+        <line x1="276" y1="346" x2="250" y2="359"/>
+        <line x1="326" y1="371" x2="300" y2="384"/>
+        <line x1="350" y1="383" x2="324" y2="396"/>
+      </g>
+      <polygon points="38,253 374,421 374,435 38,267" fill="url(#metalGrad)"/>
+      <polygon points="400,408 374,421 374,435 400,422" fill="#252B33"/>
+      <g id="rollers" fill="#39414B">
+        <circle cx="100" cy="291" r="5"><animateTransform attributeName="transform" type="rotate" from="0 100 291" to="360 100 291" dur="1.2s" repeatCount="indefinite"/></circle>
+        <circle cx="180" cy="331" r="5"><animateTransform attributeName="transform" type="rotate" from="0 180 331" to="360 180 331" dur="1.2s" repeatCount="indefinite"/></circle>
+        <circle cx="260" cy="371" r="5"><animateTransform attributeName="transform" type="rotate" from="0 260 371" to="360 260 371" dur="1.2s" repeatCount="indefinite"/></circle>
+        <circle cx="340" cy="411" r="5"><animateTransform attributeName="transform" type="rotate" from="0 340 411" to="360 340 411" dur="1.2s" repeatCount="indefinite"/></circle>
+      </g>
+      <rect x="86" y="293" width="8" height="26" fill="#39414B"/>
+      <rect x="206" y="353" width="8" height="26" fill="#39414B"/>
+      <rect x="326" y="413" width="8" height="26" fill="#39414B"/>
+    </g>
+
+    <g id="intake-machine">
+      <path d="M-8 148 L40 172" stroke-width="27" fill="none"/>
+      <path d="M-8 148 L40 172" stroke="#39414B" stroke-width="23" fill="none"/>
+      <polygon points="40,170 96,198 66,213 10,185" fill="#39414B"/>
+      <polygon points="10,185 66,213 66,291 10,263" fill="url(#metalGrad)"/>
+      <polygon points="66,213 96,198 96,276 66,291" fill="#252B33"/>
+    </g>
+
+    <g id="lint-station">
+      <rect x="138" y="222" width="8" height="84" fill="#39414B"/>
+      <polygon points="140,224 170,209 170,219 140,234" fill="url(#metalGrad)"/>
+      <rect x="150" y="226" width="10" height="10" fill="#171C24"/>
+    </g>
+
+    <g id="test-station">
+      <rect x="208" y="260" width="8" height="84" fill="#39414B"/>
+      <polygon points="210,262 240,247 240,257 210,272" fill="url(#metalGrad)"/>
+      <rect x="211" y="266" width="28" height="14" fill="#39414B"/>
+      <g id="probes" fill="#596270">
+        <rect x="216" y="280" width="3" height="12"/>
+        <rect x="223" y="280" width="3" height="12"/>
+        <rect x="230" y="280" width="3" height="12"/>
+      </g>
+    </g>
+
+    <g id="artifact-1">
+      <animateTransform attributeName="transform" type="translate" values="
+        0,0;
+        30,15;
+        100,50;
+        180,90;
+        247,122;
+        247,122;
+        289,132;
+        289,132;
+        289,232;
+        289,282;
+        289,282
+      " keyTimes="0;0.12;0.28;0.44;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;1;1;1;1;1;0;0;0;0" keyTimes="0;0.12;0.28;0.44;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" repeatCount="indefinite"/>
+      <polygon points="102,251 114,257 114,271 102,265" fill="#39414B"/>
+      <polygon points="114,257 126,251 126,265 114,271" fill="#252B33"/>
+      <polygon id="artifact-1-core" points="114,245 126,251 114,257 102,251" fill="#00CFFF" filter="url(#glow)">
+        <animate attributeName="opacity" values="1;1;1;1;1;1;1;0;0;0;0" keyTimes="0;0.12;0.28;0.44;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" repeatCount="indefinite"/>
+      </polygon>
+      <g id="artifact-1-container" fill="#FF8F1F" opacity="0">
+        <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;1;1;0" keyTimes="0;0.12;0.28;0.44;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" repeatCount="indefinite"/>
+        <polygon points="102,251 114,257 114,271 102,265"/>
+        <polygon points="114,257 126,251 126,265 114,271"/>
+        <polygon points="114,251 126,257 114,263 102,257"/>
+      </g>
+    </g>
+    <g id="artifact-2">
+      <animateTransform attributeName="transform" type="translate" values="
+        0,0;
+        24,12;
+        60,30;
+        80,42;
+        136,72;
+        136,72;
+        178,82;
+        178,82;
+        178,182;
+        178,232;
+        178,232
+      " keyTimes="0;0.18;0.3;0.42;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;1;1;1;1;1;0;0;0;0" keyTimes="0;0.18;0.3;0.42;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-3s" repeatCount="indefinite"/>
+      <polygon points="213,307 225,313 225,327 213,321" fill="#39414B"/>
+      <polygon points="225,313 237,307 237,321 225,327" fill="#252B33"/>
+      <polygon id="artifact-2-core" points="225,301 237,307 225,313 213,307" fill="#00CFFF" filter="url(#glow)">
+        <animate attributeName="opacity" values="1;1;1;1;1;1;1;0;0;0;0" keyTimes="0;0.18;0.3;0.42;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-3s" repeatCount="indefinite"/>
+      </polygon>
+      <g id="artifact-2-container" fill="#FF8F1F" opacity="0">
+        <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;1;1;0" keyTimes="0;0.18;0.3;0.42;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-3s" repeatCount="indefinite"/>
+        <polygon points="213,307 225,313 225,327 213,321"/>
+        <polygon points="225,313 237,307 237,321 225,327"/>
+        <polygon points="225,307 237,313 225,319 213,313"/>
+      </g>
+    </g>
+    <g id="artifact-3">
+      <animateTransform attributeName="transform" type="translate" values="
+        0,0;
+        8,4;
+        24,12;
+        50,24;
+        50,24;
+        54,26;
+        54,26;
+        54,116;
+        54,166;
+        54,166
+      " keyTimes="0;0.3;0.4;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;1;1;1;1;0;0;0;0" keyTimes="0;0.3;0.4;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-6s" repeatCount="indefinite"/>
+      <polygon points="234,317 246,323 246,337 234,331" fill="#39414B"/>
+      <polygon points="246,323 258,317 258,331 246,337" fill="#252B33"/>
+      <polygon id="artifact-3-core" points="246,311 258,317 246,323 234,317" fill="#00CFFF" filter="url(#glow)">
+        <animate attributeName="opacity" values="1;1;1;1;1;1;0;0;0;0" keyTimes="0;0.3;0.4;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-6s" repeatCount="indefinite"/>
+      </polygon>
+      <g id="artifact-3-container" fill="#FF8F1F" opacity="0">
+        <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;1;0" keyTimes="0;0.3;0.4;0.58;0.62;0.7;0.75;0.85;0.95;1" dur="12s" begin="-6s" repeatCount="indefinite"/>
+        <polygon points="234,317 246,323 246,337 234,331"/>
+        <polygon points="246,323 258,317 258,331 246,337"/>
+        <polygon points="246,317 258,323 246,329 234,323"/>
+      </g>
+    </g>
+
+    <g id="xray-tunnel">
+      <polygon points="266,299 320,325 320,381 266,355" fill="url(#metalGrad)"/>
+      <polygon points="320,325 346,311 346,367 320,381" fill="#252B33"/>
+      <polygon points="326,336 340,329 340,364 326,371" fill="#0A0F14"/>
+      <polygon points="292,285 346,311 320,325 266,299" fill="#39414B"/>
+      <rect x="302" y="282" width="8" height="6" fill="#39414B"/>
+    </g>
+
+    <g id="packager">
+      <rect x="383" y="314" width="12" height="88" fill="#252B33"/>
+      <rect x="357" y="327" width="12" height="88" fill="#39414B"/>
+      <polygon points="355,329 397,308 397,284 355,305" fill="url(#metalGrad)"/>
+      <polygon points="355,305 397,284 405,288 363,309" fill="#39414B"/>
+      <g id="press">
+        <rect x="372" y="302" width="8" height="12" fill="#596270">
+          <animate attributeName="y" values="318;318;302;302;318;318" keyTimes="0;0.15;0.2;0.4;0.45;1" dur="5s" repeatCount="indefinite"/>
+        </rect>
+        <polygon points="362,344 390,330 398,334 370,348" fill="#39414B">
+          <animate attributeName="opacity" values="1;1;0.8;1;1" keyTimes="0;0.45;0.5;0.55;1" dur="5s" repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="370,348 398,334 398,340 370,354" fill="#252B33"/>
+      </g>
+    </g>
+
+    
+    <g id="crates">
+      <polygon points="454,410 470,418 470,438 454,430" fill="#39414B"/>
+      <polygon points="470,418 486,410 486,430 470,438" fill="#252B33"/>
+      <polygon points="470,402 486,410 470,418 454,410" fill="#39414B"/>
+      <line x1="457" y1="414" x2="467" y2="434"/>
+    </g>
+
+    <g id="robot-arm">
+      <ellipse cx="300" cy="447" rx="16" ry="8" fill="#252B33"/>
+      <rect x="284" y="431" width="32" height="16" fill="#39414B"/>
+      <ellipse cx="300" cy="431" rx="16" ry="8" fill="url(#metalGrad)"/>
+      <circle cx="300" cy="428" r="6" fill="#596270"/>
+      <g id="arm-lower">
+        <animateTransform attributeName="transform" type="rotate" values="-6 276 398;6 276 398;-6 276 398" keyTimes="0;0.5;1" dur="3.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+        <path d="M276 398 L308 380" stroke-width="11" fill="none"/>
+        <path d="M276 398 L308 380" stroke="#596270" stroke-width="7" fill="none"/>
+        <g id="gripper">
+          <animateTransform attributeName="transform" type="rotate" values="-4 308 380;4 308 380;-4 308 380" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+          <path d="M308 380 L318 376" stroke-width="7" fill="none"/>
+          <path d="M308 380 L318 376" stroke="#596270" stroke-width="4" fill="none"/>
+          <path d="M308 380 L316 387" stroke-width="7" fill="none"/>
+          <path d="M308 380 L316 387" stroke="#596270" stroke-width="4" fill="none"/>
+        </g>
+      </g>
+    </g>
+
+    <g id="monitor">
+      <rect x="146" y="384" width="6" height="22" fill="#39414B"/>
+      <polygon points="124,354 168,332 168,362 124,384" fill="#171C24"/>
+    </g>
+  </g>
+
+  <g id="glass">
+    <polygon points="132,170 188,198 188,234 132,206" fill="url(#glassGrad)"/>
+    <polygon points="204,206 260,234 260,270 204,242" fill="url(#glassGrad)"/>
+    <polygon points="276,242 332,270 332,306 276,278" fill="url(#glassGrad)"/>
+    <line x1="160" y1="184" x2="160" y2="220"/>
+    <line x1="232" y1="220" x2="232" y2="256"/>
+    <line x1="304" y1="256" x2="304" y2="292"/>
+    <path d="M-8 148 L40 172" stroke="url(#glassGrad)" stroke-width="13" fill="none"/>
+    <polygon points="20,214 52,230 52,252 20,236" fill="url(#glassGrad)"/>
+    <polygon points="274,313 308,329 308,349 274,333" fill="url(#glassGrad)"/>
+    <polygon points="129,354 163,337 163,358 129,375" fill="url(#glassGrad)"/>
+  </g>
+
+  <g id="water" filter="url(#glow)">
+    <path id="pipe-water" d="M-6 149 L38 171" stroke="#00CFFF" stroke-width="7" fill="none"/>
+    <path id="intake-water" d="M24 225 L48 237" stroke="#00CFFF" stroke-width="5" fill="none"/>
+  </g>
+
+  <g id="lights">
+    <circle id="beacon" cx="412" cy="228" r="4.5" fill="#F4B740" filter="url(#glow)">
+      <animate attributeName="r" values="4.5;7;4.5" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <g id="laser" stroke="#F4B740" filter="url(#glow)">
+      <line x1="155" y1="236" x2="155" y2="283" stroke-width="2.5">
+        <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/>
+      </line>
+      <line x1="168" y1="278" x2="142" y2="291" stroke-width="2">
+        <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" begin="-0.6s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <g id="test-leds" fill="#2EE66B" filter="url(#glow)">
+      <circle cx="217" cy="273" r="2.5"><animate attributeName="opacity" values="1;0.1;1" dur="1.2s" repeatCount="indefinite"/></circle>
+      <circle cx="225" cy="273" r="2.5"><animate attributeName="opacity" values="1;0.1;1" dur="1.2s" begin="-0.3s" repeatCount="indefinite"/></circle>
+      <circle cx="233" cy="273" r="2.5"><animate attributeName="opacity" values="1;0.1;1" dur="1.2s" begin="-0.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <g id="xray-beam" stroke="#B388FF" filter="url(#glow)">
+      <line x1="291" y1="320" x2="291" y2="341" stroke-width="4">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+        <animate attributeName="y1" values="320;322;320" dur="1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="280" y1="331" x2="302" y2="341" stroke-width="2" opacity="0.6">
+        <animate attributeName="y1" values="320;339;320" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.85;0" dur="2s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <circle id="xray-lamp" cx="306" cy="278" r="4.5" fill="#F4B740" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="81" cy="236" r="3" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/></circle>
+    <circle cx="81" cy="248" r="3" fill="#F4B740" filter="url(#glow)"><animate attributeName="opacity" values="1;0.25;1" dur="1.7s" begin="-0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="388" cy="296" r="3" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="290" cy="438" r="2.5" fill="#2EE66B" filter="url(#glow)"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" begin="-0.4s" repeatCount="indefinite"/></circle>
+    <g id="screen" stroke="#2EE66B" filter="url(#glow)" opacity="0.9">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.8s" repeatCount="indefinite"/>
+      <line x1="134" y1="358" x2="156" y2="347"/>
+      <line x1="134" y1="366" x2="156" y2="355"/>
+    </g>
+  </g>
+
+  <g id="bolts">
+    <use href="#bolt" x="18" y="268"/>
+    <use href="#bolt" x="58" y="288"/>
+    <use href="#bolt" x="46" y="262"/>
+    <use href="#bolt" x="368" y="428"/>
+    <use href="#bolt" x="144" y="229"/>
+    <use href="#bolt" x="214" y="267"/>
+    <use href="#bolt" x="272" y="306"/>
+    <use href="#bolt" x="312" y="370"/>
+    <use href="#bolt" x="363" y="335"/>
+    <use href="#bolt" x="389" y="322"/>
+    <use href="#bolt" x="360" y="312"/>
+    <use href="#bolt" x="288" y="441"/>
+  </g>
+
+  <g id="overlay">
+    <g id="steam" fill="#596270" stroke="none">
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+      <ellipse cx="250" cy="128" rx="7" ry="5" opacity="0.35"/>
+      <ellipse cx="258" cy="114" rx="9" ry="6" opacity="0.25"/>
+      <ellipse cx="266" cy="100" rx="11" ry="7" opacity="0.15"/>
+    </g>
+    <polygon points="376,380 394,371 394,391 376,400" fill="rgba(0,0,0,0.35)" stroke="none"/>
+    <polygon points="432,428 450,419 450,439 432,448" fill="rgba(0,0,0,0.35)" stroke="none"/>
+    <line x1="52" y1="103" x2="372" y2="263" stroke="#596270" opacity="0.6"/>
+  </g>
+</svg>

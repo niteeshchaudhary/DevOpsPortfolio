@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="fireGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFAA00" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FF4444" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF4444" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <rect x="16" y="48" width="32" height="6" rx="3" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Base -->
+  <g id="base">
+    <rect x="20" y="44" width="24" height="4" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+  </g>
+  
+  <!-- Furnace Body -->
+  <g id="body">
+    <rect x="20" y="24" width="24" height="20" rx="4" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="20" y="24" width="24" height="10" rx="4" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Fire Chamber -->
+  <g id="chamber">
+    <rect x="26" y="30" width="12" height="10" rx="2" fill="#1A1F26" stroke="#4D5664" stroke-width="1"/>
+    <ellipse cx="32" cy="38" rx="4" ry="3" fill="url(#fireGradient)" filter="url(#redGlow)"/>
+  </g>
+  
+  <!-- Vent -->
+  <g id="vent">
+    <rect x="28" y="20" width="8" height="4" rx="2" fill="#1A1F26" stroke="#4D5664" stroke-width="1"/>
+    <rect x="29" y="21" width="1" height="2" rx="0.5" fill="#2D3440"/>
+    <rect x="31" y="21" width="1" height="2" rx="0.5" fill="#2D3440"/>
+    <rect x="33" y="21" width="1" height="2" rx="0.5" fill="#2D3440"/>
+  </g>
+  
+  <!-- Temperature Gauge -->
+  <g id="gauge">
+    <circle cx="32" cy="34" r="3" fill="#1A1F26" stroke="#4D5664" stroke-width="1"/>
+    <path d="M32 32 L32 34 L34 35" stroke="#FF4444" stroke-width="0.5" fill="none" id="gaugeNeedle"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="22" y="46"/>
+    <use href="#bolt" x="42" y="46"/>
+  </g>
+</svg>

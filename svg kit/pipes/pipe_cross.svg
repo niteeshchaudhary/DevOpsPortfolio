@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A6D6" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00A6D6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00A6D6" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <path d="M32 8 Q32 8 36 12 L36 52 Q36 56 32 56 Q28 56 28 52 L28 12 Q28 8 32 8" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  <path d="M8 32 Q8 32 12 28 L52 28 Q56 28 56 32 Q56 36 52 36 L12 36 Q8 36 8 32" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Metal Pipe Body - Vertical -->
+  <g id="metal-vertical">
+    <path d="M28 8 L36 8 L36 56 Q36 56 32 56 Q28 56 28 56 Z" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Metal Pipe Body - Horizontal -->
+  <g id="metal-horizontal">
+    <path d="M8 28 L56 28 L56 36 Q56 36 52 36 L12 36 Q8 36 8 36 Z" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Center Joint -->
+  <circle cx="32" cy="32" r="6" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+  
+  <!-- Glass Windows -->
+  <g id="glass">
+    <rect x="29" y="16" width="6" height="12" rx="3" fill="url(#glassGradient)" stroke="#00A6D6" stroke-width="1" opacity="0.6"/>
+    <rect x="16" y="29" width="12" height="6" rx="3" fill="url(#glassGradient)" stroke="#00A6D6" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Water Flow -->
+  <g id="water">
+    <rect x="30" y="18" width="4" height="8" rx="2" fill="#00D5FF" opacity="0.8"/>
+    <rect x="18" y="30" width="8" height="4" rx="2" fill="#00D5FF" opacity="0.8"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="30" y="14"/>
+    <use href="#bolt" x="34" y="14"/>
+    <use href="#bolt" x="14" y="30"/>
+    <use href="#bolt" x="14" y="34"/>
+    <use href="#bolt" x="50" y="30"/>
+    <use href="#bolt" x="50" y="34"/>
+    <use href="#bolt" x="30" y="50"/>
+    <use href="#bolt" x="34" y="50"/>
+  </g>
+</svg>

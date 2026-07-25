@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="containerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <rect x="16" y="48" width="32" height="6" rx="3" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Container Body -->
+  <g id="body">
+    <rect x="16" y="24" width="32" height="20" rx="2" fill="url(#containerGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="16" y="24" width="32" height="10" rx="2" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Container Ribs -->
+  <g id="ribs">
+    <rect x="20" y="26" width="2" height="16" rx="1" fill="#1A1F26" opacity="0.3"/>
+    <rect x="26" y="26" width="2" height="16" rx="1" fill="#1A1F26" opacity="0.3"/>
+    <rect x="32" y="26" width="2" height="16" rx="1" fill="#1A1F26" opacity="0.3"/>
+    <rect x="38" y="26" width="2" height="16" rx="1" fill="#1A1F26" opacity="0.3"/>
+    <rect x="44" y="26" width="2" height="16" rx="1" fill="#1A1F26" opacity="0.3"/>
+  </g>
+  
+  <!-- Corner Castings -->
+  <g id="corners">
+    <rect x="17" y="25" width="3" height="3" rx="1" fill="#1A1F26"/>
+    <rect x="44" y="25" width="3" height="3" rx="1" fill="#1A1F26"/>
+    <rect x="17" y="42" width="3" height="3" rx="1" fill="#1A1F26"/>
+    <rect x="44" y="42" width="3" height="3" rx="1" fill="#1A1F26"/>
+  </g>
+  
+  <!-- Logo/Label -->
+  <g id="label">
+    <rect x="24" y="30" width="16" height="8" rx="1" fill="#1A1F26" opacity="0.5"/>
+    <path d="M26 34 L28 36 L32 32 L36 36 L38 34" stroke="#00D5FF" stroke-width="1.5" fill="none" filter="url(#cyanGlow)"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="18" y="26"/>
+    <use href="#bolt" x="46" y="26"/>
+    <use href="#bolt" x="18" y="42"/>
+    <use href="#bolt" x="46" y="42"/>
+  </g>
+</svg>

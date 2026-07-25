@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="amberGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <path d="M20 44 Q32 44 44 44 Q44 44 40 48 Q32 48 24 48 Q20 48 20 44" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Base -->
+  <g id="base">
+    <rect x="24" y="40" width="16" height="4" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+  </g>
+  
+  <!-- Welder Arm -->
+  <g id="arm">
+    <rect x="28" y="24" width="8" height="18" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="28" y="24" width="8" height="9" rx="2" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Welder Head -->
+  <g id="head">
+    <rect x="26" y="38" width="12" height="6" rx="2" fill="#2D3440" stroke="#1A1F26" stroke-width="1"/>
+  </g>
+  
+  <!-- Welding Tip -->
+  <g id="tip">
+    <rect x="30" y="44" width="4" height="4" rx="1" fill="#1A1F26"/>
+  </g>
+  
+  <!-- Weld Spark -->
+  <g id="spark">
+    <circle cx="32" cy="50" r="2" fill="#FFAA00" filter="url(#amberGlow)" opacity="0.9"/>
+    <circle cx="30" cy="48" r="1" fill="#FFFFFF" filter="url(#cyanGlow)" opacity="0.6"/>
+    <circle cx="34" cy="48" r="1" fill="#FFFFFF" filter="url(#cyanGlow)" opacity="0.6"/>
+  </g>
+  
+  <!-- Status Light -->
+  <g id="light">
+    <circle cx="32" cy="30" r="1.5" fill="#44FF44" filter="url(#cyanGlow)" opacity="0.8"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="26" y="42"/>
+    <use href="#bolt" x="38" y="42"/>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A2B3C"/>
+      <stop offset="100%" stop-color="#0D151D"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <rect x="16" y="48" width="32" height="6" rx="3" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Stand -->
+  <g id="stand">
+    <rect x="28" y="44" width="8" height="6" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="24" y="50" width="16" height="4" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+  </g>
+  
+  <!-- Monitor Bezel -->
+  <g id="bezel">
+    <rect x="16" y="16" width="32" height="24" rx="2" fill="#1A1F26" stroke="#2D3440" stroke-width="2"/>
+  </g>
+  
+  <!-- Screen -->
+  <g id="screen">
+    <rect x="18" y="18" width="28" height="20" rx="1" fill="url(#screenGradient)"/>
+    <!-- Grid Lines -->
+    <path d="M18 24 L46 24" stroke="#00D5FF" stroke-width="0.5" opacity="0.3"/>
+    <path d="M18 30 L46 30" stroke="#00D5FF" stroke-width="0.5" opacity="0.3"/>
+    <path d="M18 36 L46 36" stroke="#00D5FF" stroke-width="0.5" opacity="0.3"/>
+    <path d="M24 18 L24 38" stroke="#00D5FF" stroke-width="0.5" opacity="0.3"/>
+    <path d="M32 18 L32 38" stroke="#00D5FF" stroke-width="0.5" opacity="0.3"/>
+    <path d="M40 18 L40 38" stroke="#00D5FF" stroke-width="0.5" opacity="0.3"/>
+  </g>
+  
+  <!-- Graph Line -->
+  <g id="graph">
+    <path d="M20 32 L26 28 L32 34 L38 26 L44 30" stroke="#00D5FF" stroke-width="1.5" fill="none" filter="url(#cyanGlow)"/>
+  </g>
+  
+  <!-- Power LED -->
+  <g id="led">
+    <circle cx="32" cy="42" r="1" fill="#44FF44" filter="url(#cyanGlow)"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="26" y="52"/>
+    <use href="#bolt" x="38" y="52"/>
+  </g>
+</svg>

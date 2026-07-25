@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A6D6" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00A6D6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00A6D6" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <path d="M32 8 L32 56 Q32 56 28 52 L28 12 Q28 8 32 8" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Metal Pipe Body -->
+  <g id="metal">
+    <path d="M28 8 L36 8 L36 56 Q36 56 32 56 Q28 56 28 56 Z" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M28 8 L36 8 L36 16 Q36 16 32 16 Q28 16 28 16 Z" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Glass Window -->
+  <g id="glass">
+    <rect x="29" y="24" width="6" height="20" rx="3" fill="url(#glassGradient)" stroke="#00A6D6" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Water Flow -->
+  <g id="water">
+    <rect x="30" y="26" width="4" height="16" rx="2" fill="#00D5FF" opacity="0.8"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="30" y="14"/>
+    <use href="#bolt" x="34" y="14"/>
+    <use href="#bolt" x="30" y="50"/>
+    <use href="#bolt" x="34" y="50"/>
+  </g>
+</svg>

@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6470"/>
+      <stop offset="0.5" stop-color="#3C434D"/>
+      <stop offset="1" stop-color="#262C34"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.30)"/>
+      <stop offset="1" stop-color="rgba(0,180,255,0.20)"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <g id="crate">
+      <polygon points="0,0 20,-10 40,0 20,10" fill="#596270"/>
+      <polygon points="0,0 20,10 20,32 0,22" fill="#39414B"/>
+      <polygon points="20,10 40,0 40,22 20,32" fill="#252B33"/>
+      <line x1="10" y1="7" x2="10" y2="25"/>
+      <line x1="30" y1="7" x2="30" y2="25"/>
+      <polygon points="4,12 14,17 14,25 4,20" fill="currentColor"/>
+    </g>
+    <g id="shelf">
+      <polygon points="0,0 144,72 170,59 26,-13" fill="#596270"/>
+      <polygon points="0,0 144,72 144,80 0,8" fill="url(#metalGrad)"/>
+      <polygon points="144,72 170,59 170,67 144,80" fill="#252B33"/>
+    </g>
+    <g id="postA">
+      <polygon points="0,0 10,5 10,175 0,170" fill="url(#metalGrad)"/>
+    </g>
+    <g id="postB">
+      <polygon points="0,0 10,5 10,125 0,120" fill="url(#metalGrad)"/>
+    </g>
+    <g id="bolt">
+      <circle r="4" fill="#39414B"/>
+      <circle r="2" fill="#171C24" stroke="none"/>
+      <circle cx="-1.5" cy="-1.5" r="1" fill="#596270" stroke="none"/>
+    </g>
+  </defs>
+
+  <g id="shadow" fill="rgba(0,0,0,0.35)" stroke="none">
+    <polygon points="76,318 220,390 246,377 102,305"/>
+    <polygon points="240,372 384,444 410,431 266,359"/>
+    <polygon points="156,346 316,426 328,420 168,340"/>
+    <polygon points="24,412 168,484 194,471 50,399"/>
+    <polygon points="346,440 470,502 496,489 372,427"/>
+    <ellipse cx="52" cy="305" rx="30" ry="9"/>
+    <ellipse cx="436" cy="326" rx="20" ry="6"/>
+  </g>
+
+  <g id="metal">
+    <rect x="30" y="96" width="24" height="176" rx="6" fill="#39414B"/>
+    <rect x="26" y="130" width="32" height="10" rx="3" fill="#596270"/>
+    <rect x="26" y="220" width="32" height="10" rx="3" fill="#596270"/>
+    <polygon points="14,268 42,254 70,268 42,282" fill="#596270"/>
+    <polygon points="14,268 42,282 42,310 14,296" fill="#39414B"/>
+    <polygon points="42,282 70,268 70,296 42,310" fill="#252B33"/>
+
+    <g id="rack-a">
+      <use href="#postA" x="90" y="127"/>
+      <use href="#postA" x="234" y="199"/>
+      <use href="#postA" x="64" y="140"/>
+      <use href="#postA" x="112" y="164"/>
+      <use href="#postA" x="160" y="188"/>
+      <use href="#postA" x="208" y="212"/>
+      <use href="#shelf" x="68" y="146"/>
+      <use href="#shelf" x="68" y="196"/>
+      <use href="#shelf" x="68" y="246"/>
+      <use href="#shelf" x="68" y="296"/>
+      <use href="#crate" x="84" y="124" color="#4FC3F7"/>
+      <use href="#crate" x="132" y="148" color="#B388FF"/>
+      <use href="#crate" x="84" y="174" color="#4FC3F7"/>
+      <use href="#crate" x="180" y="222" color="#FF8F1F"/>
+      <use href="#crate" x="84" y="224" color="#6CD8FF"/>
+      <use href="#crate" x="132" y="248" color="#4FC3F7"/>
+      <use href="#crate" x="180" y="272" color="#B388FF"/>
+      <use href="#crate" x="84" y="274" color="#FF8F1F"/>
+      <use href="#crate" x="132" y="298" color="#6CD8FF"/>
+      <use href="#crate" x="180" y="322" color="#4FC3F7"/>
+    </g>
+
+    <polygon points="404,214 456,188 456,236 404,262" fill="#171C24"/>
+    <rect x="426" y="258" width="8" height="64" fill="#39414B"/>
+
+    <g id="crane">
+      <polygon points="150,121 334,213 334,219 150,127" fill="#252B33"/>
+      <polygon points="328,214 336,218 336,304 328,300" fill="#39414B"/>
+      <polygon points="150,338 310,418 322,412 162,332" fill="#39414B"/>
+      <polygon points="150,338 310,418 310,424 150,344" fill="#252B33"/>
+      <polygon points="190,148 204,155 214,150 200,143" fill="#596270"/>
+      <polygon points="190,148 204,155 204,358 190,351" fill="#39414B"/>
+      <polygon points="204,155 214,150 214,353 204,358" fill="#252B33"/>
+      <g id="wheel" fill="#252B33">
+        <circle cx="190" cy="356" r="5"/>
+        <circle cx="210" cy="366" r="5"/>
+      </g>
+      <g id="carriage">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 22,11; 0,0" keyTimes="0;0.5;1" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+        <polygon points="152,246 196,268 210,261 166,239" fill="#596270"/>
+        <polygon points="152,246 196,268 196,276 152,254" fill="url(#metalGrad)"/>
+        <use href="#crate" x="168" y="224" color="#FF8F1F"/>
+      </g>
+    </g>
+
+    <g id="rack-b">
+      <polygon points="398,309 408,314 408,434 398,429" fill="url(#metalGrad)"/>
+      <use href="#postB" x="228" y="250"/>
+      <use href="#postB" x="276" y="274"/>
+      <use href="#postB" x="324" y="298"/>
+      <use href="#postB" x="372" y="322"/>
+      <use href="#shelf" x="232" y="256"/>
+      <use href="#shelf" x="232" y="306"/>
+      <use href="#shelf" x="232" y="356"/>
+      <use href="#crate" x="248" y="234" color="#B388FF"/>
+      <use href="#crate" x="344" y="282" color="#4FC3F7"/>
+      <use href="#crate" x="248" y="284" color="#6CD8FF"/>
+      <use href="#crate" x="296" y="308" color="#FF8F1F"/>
+      <use href="#crate" x="344" y="332" color="#B388FF"/>
+      <use href="#crate" x="248" y="334" color="#4FC3F7"/>
+      <use href="#crate" x="296" y="358" color="#6CD8FF"/>
+    </g>
+
+    <g id="conveyor-in">
+      <polygon points="28,408 36,412 36,434 28,430" fill="#252B33"/>
+      <polygon points="136,462 144,466 144,488 136,484" fill="#252B33"/>
+      <polygon points="16,398 160,470 186,457 42,385" fill="#39414B"/>
+      <polygon points="22,399 156,466 176,456 42,389" fill="#252B33"/>
+      <polygon points="16,398 160,470 160,480 16,408" fill="url(#metalGrad)"/>
+      <use href="#crate" x="12" y="366" color="#4FC3F7">
+        <animate attributeName="x" values="12;100" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="366;410" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="5s" repeatCount="indefinite"/>
+      </use>
+      <use href="#crate" x="68" y="392" color="#B388FF">
+        <animate attributeName="x" values="68;132" dur="5s" begin="-2.5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="392;432" dur="5s" begin="-2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="5s" begin="-2.5s" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <g id="gate">
+      <polygon points="98,372 106,376 106,450 98,446" fill="#39414B"/>
+      <polygon points="126,355 134,359 134,433 126,429" fill="#39414B"/>
+      <polygon points="96,364 136,344 136,354 96,374" fill="url(#metalGrad)"/>
+    </g>
+
+    <g id="conveyor-out">
+      <polygon points="352,440 360,444 360,466 352,462" fill="#252B33"/>
+      <polygon points="444,484 452,488 452,510 444,506" fill="#252B33"/>
+      <polygon points="340,430 464,492 490,479 366,417" fill="#39414B"/>
+      <polygon points="346,431 460,488 480,478 366,421" fill="#252B33"/>
+      <polygon points="340,430 464,492 464,502 340,440" fill="url(#metalGrad)"/>
+      <use href="#crate" x="388" y="424" color="#FF8F1F">
+        <animate attributeName="x" values="340;460" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="418;470" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="4s" repeatCount="indefinite"/>
+      </use>
+    </g>
+  </g>
+
+  <g id="glass">
+    <rect x="36" y="104" width="12" height="160" rx="4" fill="url(#glassGrad)"/>
+    <polygon id="screen" points="410,216 450,196 450,230 410,250" fill="url(#glassGrad)"/>
+  </g>
+
+  <g id="water" stroke="none">
+    <g filter="url(#glow)" fill="#00CFFF" opacity="0.7">
+      <rect x="38" y="106" width="8" height="22"/>
+      <rect x="38" y="142" width="8" height="76"/>
+      <rect x="38" y="232" width="8" height="30"/>
+    </g>
+    <g id="water-flow" fill="#00CFFF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" repeatCount="indefinite"/>
+      <rect x="38" y="106" width="8" height="22"/>
+      <rect x="38" y="142" width="8" height="76"/>
+      <rect x="38" y="232" width="8" height="30"/>
+    </g>
+  </g>
+
+  <g id="lights">
+    <g filter="url(#glow)" stroke="none">
+      <circle cx="100" cy="166" r="5" fill="#2EE66B"/>
+      <circle cx="148" cy="190" r="5" fill="#2EE66B"/>
+      <circle cx="196" cy="214" r="5" fill="#F4B740"/>
+      <circle cx="100" cy="216" r="5" fill="#2EE66B"/>
+      <circle cx="148" cy="240" r="5" fill="#F4B740"/>
+      <circle cx="196" cy="264" r="5" fill="#2EE66B"/>
+      <circle cx="100" cy="266" r="5" fill="#2EE66B"/>
+      <circle cx="148" cy="290" r="5" fill="#2EE66B"/>
+      <circle cx="196" cy="314" r="5" fill="#2EE66B"/>
+      <circle cx="100" cy="316" r="5" fill="#2EE66B"/>
+      <circle cx="148" cy="340" r="5" fill="#FF5A5A"/>
+      <circle cx="196" cy="364" r="5" fill="#2EE66B"/>
+      <circle cx="264" cy="276" r="5" fill="#2EE66B"/>
+      <circle cx="312" cy="300" r="5" fill="#F4B740"/>
+      <circle cx="360" cy="324" r="5" fill="#2EE66B"/>
+      <circle cx="264" cy="326" r="5" fill="#2EE66B"/>
+      <circle cx="312" cy="350" r="5" fill="#2EE66B"/>
+      <circle cx="360" cy="374" r="5" fill="#2EE66B"/>
+      <circle cx="264" cy="376" r="5" fill="#2EE66B"/>
+      <circle cx="312" cy="400" r="5" fill="#2EE66B"/>
+      <circle cx="360" cy="424" r="5" fill="#F4B740"/>
+      <circle cx="202" cy="136" r="5" fill="#F4B740"/>
+      <circle cx="34" cy="416" r="4" fill="#2EE66B"/>
+      <circle cx="452" cy="470" r="4" fill="#FF8F1F"/>
+      <line x1="104" y1="438" x2="128" y2="426" stroke="#FF5A5A"/>
+    </g>
+    <circle cx="100" cy="166" r="3" fill="#2EE66B"/>
+    <circle cx="148" cy="190" r="3" fill="#2EE66B"/>
+    <circle cx="196" cy="214" r="3" fill="#F4B740">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    <circle cx="100" cy="216" r="3" fill="#2EE66B"/>
+    <circle cx="148" cy="240" r="3" fill="#F4B740"/>
+    <circle cx="196" cy="264" r="3" fill="#2EE66B"/>
+    <circle cx="100" cy="266" r="3" fill="#2EE66B"/>
+    <circle cx="148" cy="290" r="3" fill="#2EE66B"/>
+    <circle cx="196" cy="314" r="3" fill="#2EE66B"/>
+    <circle cx="100" cy="316" r="3" fill="#2EE66B"/>
+    <circle cx="148" cy="340" r="3" fill="#FF5A5A">
+        <animate attributeName="opacity" values="1;0.2;1" dur="0.7s" repeatCount="indefinite"/>
+      </circle>
+    <circle cx="196" cy="364" r="3" fill="#2EE66B"/>
+    <circle cx="264" cy="276" r="3" fill="#2EE66B"/>
+    <circle cx="312" cy="300" r="3" fill="#F4B740">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="-1s" repeatCount="indefinite"/>
+      </circle>
+    <circle cx="360" cy="324" r="3" fill="#2EE66B"/>
+    <circle cx="264" cy="326" r="3" fill="#2EE66B"/>
+    <circle cx="312" cy="350" r="3" fill="#2EE66B"/>
+    <circle cx="360" cy="374" r="3" fill="#2EE66B"/>
+    <circle cx="264" cy="376" r="3" fill="#2EE66B"/>
+    <circle cx="312" cy="400" r="3" fill="#2EE66B"/>
+    <circle cx="360" cy="424" r="3" fill="#F4B740"/>
+    <circle id="beacon" cx="202" cy="136" r="3" fill="#F4B740">
+        <animate attributeName="r" values="3;6;3" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.45;1" dur="1.4s" repeatCount="indefinite"/>
+      </circle>
+    <circle cx="34" cy="416" r="2.5" fill="#2EE66B"/>
+    <circle cx="452" cy="470" r="2.5" fill="#FF8F1F"/>
+    <g id="laser" stroke="none">
+      <polygon points="104,370 128,358 128,426 104,438" fill="#FF5A5A" fill-opacity="0.12">
+        <animate attributeName="fill-opacity" values="0.06;0.30;0.06" dur="1.2s" repeatCount="indefinite"/>
+      </polygon>
+      <rect x="106" y="358" width="20" height="2" fill="#00CFFF" opacity="0">
+        <animate attributeName="y" values="358;432;358" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+      <line x1="104" y1="438" x2="128" y2="426" stroke="#FF5A5A" stroke-width="2">
+        <animate attributeName="opacity" values="0.35;1;0.35" dur="1.2s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <g stroke-width="2">
+      <line x1="416" y1="224" x2="434" y2="215" stroke="#6CD8FF"/>
+      <line x1="416" y1="234" x2="444" y2="220" stroke="#2EE66B"/>
+      <line x1="416" y1="244" x2="428" y2="238" stroke="#F4B740"/>
+    </g>
+  </g>
+
+  <g id="bolts">
+    <use href="#bolt" x="33" y="135"/>
+    <use href="#bolt" x="51" y="225"/>
+    <use href="#bolt" x="197" y="200"/>
+    <use href="#bolt" x="197" y="336"/>
+    <use href="#bolt" x="116" y="360"/>
+    <use href="#bolt" x="27" y="288"/>
+    <use href="#bolt" x="26" y="410"/>
+    <use href="#bolt" x="450" y="492"/>
+  </g>
+
+  <g id="overlay" stroke="#596270" opacity="0.5">
+    <line x1="68" y1="146" x2="212" y2="218"/>
+    <line x1="232" y1="256" x2="376" y2="328"/>
+    <line x1="190" y1="156" x2="190" y2="344"/>
+  </g>
+</svg>

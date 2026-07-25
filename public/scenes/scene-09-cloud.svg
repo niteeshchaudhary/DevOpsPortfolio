@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6470"/>
+      <stop offset="0.5" stop-color="#3C434D"/>
+      <stop offset="1" stop-color="#262C34"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.30)"/>
+      <stop offset="1" stop-color="rgba(0,180,255,0.20)"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="bolt">
+      <circle r="4" fill="#596270" stroke-width="1.5"/>
+      <circle r="2" fill="#20242A" stroke="none"/>
+      <circle cx="-1.3" cy="-1.3" r="1" fill="rgba(255,255,255,0.35)" stroke="none"/>
+    </g>
+    <g id="rack">
+      <path d="M0 0 L10 -5 L10 -47 L0 -42 Z" fill="#171C24"/>
+      <line x1="1.5" y1="-21" x2="8.5" y2="-25" stroke-width="1.5"/>
+    </g>
+    <g id="led3" stroke="none">
+      <circle r="1.7"/>
+      <circle cy="-9" r="1.7"/>
+      <circle cy="-18" r="1.7"/>
+    </g>
+  </defs>
+
+  <g id="shadow" fill="rgba(0,0,0,0.35)" stroke="none">
+    <ellipse cx="250" cy="497" rx="118" ry="11"/>
+    <ellipse cx="434" cy="268" rx="46" ry="7"/>
+    <ellipse cx="106" cy="184" rx="38" ry="6"/>
+  </g>
+
+  <g id="metal">
+    <!-- storm cloud bank (back) -->
+    <ellipse cx="120" cy="440" rx="70" ry="22" fill="#171C24"/>
+    <ellipse cx="250" cy="452" rx="82" ry="24" fill="#171C24"/>
+    <ellipse cx="382" cy="430" rx="58" ry="19" fill="#171C24"/>
+
+    <!-- distant region (upper-left) -->
+    <ellipse cx="100" cy="164" rx="44" ry="12" fill="#171C24"/>
+    <polygon points="70,144 80,144 84,168 66,168" fill="#171C24"/>
+    <polygon points="120,144 130,144 134,166 116,166" fill="#171C24"/>
+    <path d="M36 120 L36 128 L76 148 L132 148 L172 128 L172 120 L132 140 L76 140 Z" fill="#171C24"/>
+    <polygon points="36,120 76,100 132,100 172,120 132,140 76,140" fill="#252B33"/>
+    <polygon points="84,96 104,86 124,96 104,106" fill="#39414B"/>
+    <polygon points="84,96 104,106 104,122 84,112" fill="#252B33"/>
+    <polygon points="104,106 124,96 124,112 104,122" fill="#171C24"/>
+    <line x1="140" y1="116" x2="140" y2="88"/>
+
+    <!-- main platform pylons + bracing -->
+    <polygon points="112,350 130,350 138,446 104,446" fill="#252B33"/>
+    <polygon points="208,358 226,358 234,452 200,452" fill="#252B33"/>
+    <polygon points="314,350 332,350 340,440 306,440" fill="#252B33"/>
+    <polygon points="130,376 208,418 208,423 130,381" fill="#39414B"/>
+    <polygon points="208,376 130,418 130,423 208,381" fill="#39414B"/>
+    <polygon points="226,376 314,412 314,417 226,381" fill="#39414B"/>
+    <polygon points="314,374 226,414 226,419 314,379" fill="#39414B"/>
+    <line x1="216" y1="450" x2="216" y2="368"/>
+
+    <!-- beta platform pylons -->
+    <polygon points="408,175 420,175 425,236 403,236" fill="#252B33"/>
+    <polygon points="452,175 464,175 469,232 447,232" fill="#252B33"/>
+    <polygon points="420,190 447,214 447,219 420,195" fill="#39414B"/>
+
+    <!-- dark transmission cables -->
+    <path d="M274 154 Q325 196 378 152"/>
+    <path d="M142 90 Q205 140 268 156"/>
+    <path d="M64 276 Q28 302 6 348"/>
+
+    <!-- storm clouds (front) swallowing pylon feet -->
+    <ellipse cx="95" cy="466" rx="52" ry="16" fill="#171C24"/>
+    <ellipse cx="190" cy="472" rx="58" ry="17" fill="#171C24"/>
+    <ellipse cx="305" cy="468" rx="62" ry="17" fill="#171C24"/>
+    <ellipse cx="405" cy="452" rx="44" ry="14" fill="#171C24"/>
+    <ellipse cx="80" cy="456" rx="24" ry="6" fill="#252B33" stroke="none"/>
+    <ellipse cx="178" cy="462" rx="28" ry="7" fill="#252B33" stroke="none"/>
+    <ellipse cx="295" cy="458" rx="30" ry="7" fill="#252B33" stroke="none"/>
+    <ellipse cx="428" cy="242" rx="52" ry="15" fill="#171C24"/>
+    <ellipse cx="452" cy="250" rx="36" ry="11" fill="#171C24"/>
+    <ellipse cx="418" cy="235" rx="22" ry="6" fill="#252B33" stroke="none"/>
+
+    <!-- main platform deck -->
+    <path d="M56 300 L56 318 L152 366 L280 366 L376 318 L376 300 L280 348 L152 348 Z" fill="#252B33"/>
+    <polygon points="56,300 152,252 280,252 376,300 280,348 152,348" fill="url(#metalGrad)"/>
+
+    <!-- contact shadows on deck -->
+    <polygon points="222,342 302,302 314,308 234,348" fill="rgba(0,0,0,0.35)" stroke="none"/>
+    <ellipse cx="330" cy="317" rx="12" ry="4" fill="rgba(0,0,0,0.35)" stroke="none"/>
+    <ellipse cx="126" cy="328" rx="20" ry="5" fill="rgba(0,0,0,0.35)" stroke="none"/>
+
+    <!-- transformer yard -->
+    <polygon points="66,306 106,286 146,306 106,324" fill="#252B33"/>
+    <line x1="72" y1="304" x2="72" y2="266"/>
+    <line x1="62" y1="272" x2="82" y2="272"/>
+    <circle cx="64" cy="275" r="1.5" fill="#596270" stroke="none"/>
+    <circle cx="80" cy="275" r="1.5" fill="#596270" stroke="none"/>
+    <path d="M64 276 Q76 282 91 285" stroke-width="1.5"/>
+    <path d="M80 276 Q98 288 113 295" stroke-width="1.5"/>
+    <rect x="86" y="288" width="20" height="16" rx="2" fill="#39414B"/>
+    <circle cx="91" cy="286" r="2.2" fill="#596270" stroke-width="1"/>
+    <circle cx="101" cy="286" r="2.2" fill="#596270" stroke-width="1"/>
+    <rect x="108" y="298" width="20" height="16" rx="2" fill="#39414B"/>
+    <circle cx="113" cy="296" r="2.2" fill="#596270" stroke-width="1"/>
+    <circle cx="123" cy="296" r="2.2" fill="#596270" stroke-width="1"/>
+    <line x1="116" y1="322" x2="116" y2="312"/>
+    <line x1="130" y1="315" x2="130" y2="305"/>
+    <line x1="142" y1="308" x2="142" y2="298"/>
+    <path d="M116 314 L142 300" stroke-width="1.5"/>
+
+    <!-- server hall -->
+    <polygon points="140,222 220,262 220,342 140,302" fill="#39414B"/>
+    <polygon points="220,262 300,222 300,302 220,342" fill="#252B33"/>
+    <use href="#rack" x="234" y="318"/>
+    <use href="#rack" x="248" y="311"/>
+    <use href="#rack" x="262" y="304"/>
+    <use href="#rack" x="276" y="297"/>
+    <polygon points="140,222 220,182 300,222 220,262" fill="url(#metalGrad)"/>
+    <g id="door">
+      <polygon points="158,283 176,292 176,320 158,311" fill="#171C24"/>
+    </g>
+    <polygon points="168,214 188,204 208,214 188,224" fill="#39414B"/>
+    <path d="M168 214 L188 224 L208 214 L208 222 L188 232 L168 222 Z" fill="#252B33"/>
+    <polygon points="234,204 248,197 262,204 248,211" fill="#39414B"/>
+    <path d="M234 204 L248 211 L262 204 L262 211 L248 218 L234 211 Z" fill="#252B33"/>
+    <line x1="272" y1="222" x2="272" y2="152"/>
+    <line x1="266" y1="164" x2="278" y2="164"/>
+
+    <!-- cooling towers -->
+    <polygon points="298,280 314,287 314,295 298,288" fill="#39414B"/>
+    <rect x="331" y="246" width="26" height="42" fill="url(#metalGrad)"/>
+    <ellipse cx="344" cy="246" rx="13" ry="6" fill="#171C24"/>
+    <g id="fan-2" stroke="#596270">
+      <line x1="334" y1="246" x2="354" y2="246"/>
+      <line x1="338" y1="242.5" x2="350" y2="249.5"/>
+      <line x1="350" y1="242.5" x2="338" y2="249.5"/>
+      <circle cx="344" cy="246" r="2.2" fill="#596270" stroke="#20242A" stroke-width="1"/>
+    </g>
+    <ellipse cx="329" cy="312" rx="18" ry="7" fill="#252B33"/>
+    <rect x="312" y="262" width="34" height="52" fill="url(#metalGrad)"/>
+    <ellipse cx="329" cy="262" rx="17" ry="8" fill="#171C24"/>
+    <g id="fan" stroke="#596270">
+      <line x1="315" y1="262" x2="343" y2="262"/>
+      <line x1="321" y1="257" x2="337" y2="267"/>
+      <line x1="337" y1="257" x2="321" y2="267"/>
+      <circle cx="329" cy="262" r="2.8" fill="#596270" stroke="#20242A" stroke-width="1"/>
+    </g>
+
+    <!-- region beta platform -->
+    <path d="M376 152 L376 162 L414 181 L462 181 L500 162 L500 152 L462 171 L414 171 Z" fill="#252B33"/>
+    <polygon points="376,152 414,133 462,133 500,152 462,171 414,171" fill="url(#metalGrad)"/>
+    <polygon points="430,160 456,147 462,150 436,163" fill="rgba(0,0,0,0.35)" stroke="none"/>
+    <polygon points="404,118 430,131 430,161 404,148" fill="#39414B"/>
+    <polygon points="430,131 456,118 456,148 430,161" fill="#252B33"/>
+    <use href="#rack" transform="translate(437,148) scale(0.45)"/>
+    <use href="#rack" transform="translate(445,144) scale(0.45)"/>
+    <polygon points="404,118 430,105 456,118 430,131" fill="url(#metalGrad)"/>
+    <line x1="430" y1="105" x2="430" y2="88"/>
+    <line x1="480" y1="148" x2="480" y2="132"/>
+    <ellipse cx="477" cy="126" rx="7" ry="9" transform="rotate(-40 477 126)" fill="#39414B"/>
+    <line x1="477" y1="126" x2="485" y2="119"/>
+  </g>
+
+  <g id="glass">
+    <polygon points="228,268 292,236 292,290 228,322" fill="url(#glassGrad)"/>
+    <g id="screen">
+      <polygon points="186,282 208,293 208,311 186,300" fill="url(#glassGrad)"/>
+    </g>
+    <polygon points="434,130 452,121 452,143 434,152" fill="url(#glassGrad)"/>
+  </g>
+
+  <g id="water" stroke="#00CFFF" filter="url(#glow)">
+    <path d="M274 154 Q325 196 378 152" stroke-dasharray="3 9"/>
+    <path d="M142 90 Q205 140 268 156" stroke-dasharray="3 9"/>
+    <path d="M64 276 Q28 302 6 348" stroke-dasharray="3 9"/>
+    <path d="M216 450 L216 368" stroke-dasharray="3 9"/>
+    <circle cx="322" cy="182" r="2.5" fill="#00CFFF" stroke="none"/>
+    <circle cx="204" cy="138" r="2.2" fill="#00CFFF" stroke="none"/>
+  </g>
+
+  <g id="lights">
+    <!-- stars -->
+    <g fill="#6CD8FF" stroke="none">
+      <circle cx="28" cy="38" r="1.5" opacity="0.5"/>
+      <circle cx="66" cy="20" r="1.2" opacity="0.4"/>
+      <circle cx="118" cy="54" r="1.6" opacity="0.6"/>
+      <circle cx="168" cy="16" r="1.3" opacity="0.5"/>
+      <circle cx="214" cy="42" r="1.8" opacity="0.7"/>
+      <circle cx="258" cy="14" r="1.2" opacity="0.4"/>
+      <circle cx="316" cy="32" r="1.6" opacity="0.6"/>
+      <circle cx="356" cy="58" r="1.2" opacity="0.45"/>
+      <circle cx="398" cy="18" r="1.7" opacity="0.65"/>
+      <circle cx="448" cy="40" r="1.3" opacity="0.5"/>
+      <circle cx="492" cy="66" r="1.6" opacity="0.55"/>
+      <circle cx="30" cy="86" r="1.2" opacity="0.4"/>
+    </g>
+    <!-- rack LED banks -->
+    <g filter="url(#glow)">
+      <use href="#led3" x="239" y="308" fill="#2EE66B"/>
+      <use href="#led3" x="253" y="301" fill="#4FC3F7"/>
+      <use href="#led3" x="267" y="294" fill="#F4B740"/>
+      <use href="#led3" x="281" y="287" fill="#2EE66B"/>
+    </g>
+    <g stroke="none" filter="url(#glow)">
+      <circle cx="439.5" cy="143" r="1.2" fill="#2EE66B"/>
+      <circle cx="439.5" cy="138" r="1.2" fill="#4FC3F7"/>
+      <circle cx="447.5" cy="139" r="1.2" fill="#2EE66B"/>
+      <circle cx="447.5" cy="134" r="1.2" fill="#F4B740"/>
+    </g>
+    <!-- beacons and lamps -->
+    <circle cx="272" cy="148" r="2.5" fill="#FF5A5A" stroke="none" filter="url(#glow)"/>
+    <circle cx="430" cy="85" r="2" fill="#FF5A5A" stroke="none" filter="url(#glow)"/>
+    <circle cx="140" cy="85" r="1.5" fill="#FF5A5A" stroke="none" filter="url(#glow)"/>
+    <circle cx="72" cy="262" r="2" fill="#F4B740" stroke="none" filter="url(#glow)"/>
+    <circle cx="167" cy="279" r="2" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <circle cx="410" cy="142" r="1.8" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <!-- screen readout -->
+    <g stroke-width="1.5" opacity="0.9">
+      <line x1="189" y1="290" x2="202" y2="296.5" stroke="#6CD8FF"/>
+      <line x1="189" y1="294.5" x2="199" y2="299.5" stroke="#6CD8FF"/>
+      <line x1="189" y1="299" x2="204" y2="306.5" stroke="#2EE66B"/>
+    </g>
+    <!-- deck edge markers -->
+    <g fill="#6CD8FF" stroke="none" filter="url(#glow)">
+      <circle cx="170" cy="342" r="2"/>
+      <circle cx="230" cy="344" r="2"/>
+      <circle cx="298" cy="336" r="2"/>
+      <circle cx="334" cy="318" r="2"/>
+      <circle cx="100" cy="316" r="2"/>
+      <circle cx="390" cy="158" r="1.5"/>
+      <circle cx="486" cy="158" r="1.5"/>
+    </g>
+  </g>
+
+  <g id="bolts">
+    <use href="#bolt" x="170" y="357"/>
+    <use href="#bolt" x="262" y="357"/>
+    <use href="#bolt" x="102" y="334"/>
+    <use href="#bolt" x="330" y="331"/>
+    <use href="#bolt" x="146" y="232"/>
+    <use href="#bolt" x="146" y="294"/>
+    <use href="#bolt" x="294" y="232"/>
+    <use href="#bolt" x="294" y="296"/>
+    <use href="#bolt" x="318" y="272"/>
+    <use href="#bolt" x="396" y="167"/>
+    <use href="#bolt" x="482" y="166"/>
+  </g>
+
+  <g id="overlay" stroke="#596270" opacity="0.55">
+    <path d="M56 300 L152 252 L280 252"/>
+    <path d="M140 222 L220 182 L300 222"/>
+    <path d="M376 152 L414 133 L462 133"/>
+    <line x1="314" y1="266" x2="314" y2="308"/>
+  </g>
+</svg>

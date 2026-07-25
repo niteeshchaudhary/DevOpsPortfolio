@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" fill="none" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6470"/>
+      <stop offset="0.5" stop-color="#3C434D"/>
+      <stop offset="1" stop-color="#262C34"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.30)"/>
+      <stop offset="1" stop-color="rgba(0,180,255,0.20)"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="bolt">
+      <circle r="4" fill="#596270" stroke="#20242A" stroke-width="1.5"/>
+      <circle r="2" fill="#20242A" stroke="none"/>
+      <circle cx="-1.2" cy="-1.2" r="0.8" fill="rgba(255,255,255,0.45)" stroke="none"/>
+    </g>
+  </defs>
+
+  <g id="shadow" stroke="none" fill="rgba(0,0,0,0.35)">
+    <polygon points="86,380 418,214 434,222 102,388"/>
+    <polygon points="152,248 370,357 356,364 138,255"/>
+    <ellipse cx="426" cy="318" rx="52" ry="15"/>
+    <ellipse cx="132" cy="250" rx="18" ry="6"/>
+    <ellipse cx="314" cy="330" rx="17" ry="5"/>
+    <ellipse cx="163" cy="298" rx="13" ry="4"/>
+  </g>
+
+  <g id="metal">
+    <!-- ground aprons -->
+    <polygon points="104,248 348,370 372,358 128,236" fill="#171C24"/>
+    <polygon points="344,336 436,290 462,303 370,349" fill="#171C24"/>
+    <polygon points="74,372 406,206 422,214 90,380" fill="#252B33"/>
+
+    <!-- radar tower (behind wall) -->
+    <ellipse cx="120" cy="244" rx="14" ry="6" fill="#252B33"/>
+    <rect x="116" y="176" width="8" height="66" rx="2" fill="#39414B"/>
+    <g id="radar" transform="translate(120,166)">
+      <ellipse rx="24" ry="9" transform="rotate(-30)" fill="#596270"/>
+      <ellipse rx="15" ry="5" transform="rotate(-30)" fill="#252B33"/>
+      <line x1="0" y1="0" x2="16" y2="-12"/>
+      <circle cx="16" cy="-12" r="2.5" fill="#596270"/>
+    </g>
+
+    <!-- floodlight mast (behind wall) -->
+    <rect x="86" y="242" width="6" height="72" rx="2" fill="#39414B"/>
+    <rect x="78" y="232" width="22" height="12" rx="3" fill="#252B33"/>
+
+    <!-- data pipe, rear segment -->
+    <polygon points="140,214 224,256 224,280 140,238" fill="url(#metalGrad)"/>
+    <rect x="134" y="210" width="10" height="32" rx="3" fill="#596270"/>
+    <rect x="183" y="234" width="8" height="32" rx="2" fill="#596270"/>
+
+    <!-- perimeter wall, left segment -->
+    <polygon points="80,368 204,306 204,246 80,308" fill="url(#metalGrad)"/>
+    <polygon points="80,308 204,246 216,252 92,314" fill="#596270"/>
+    <polygon points="204,306 216,312 216,252 204,246" fill="#252B33"/>
+    <polygon points="80,368 92,374 92,314 80,308" fill="#39414B"/>
+    <polygon points="84,362 200,304 200,296 84,354" fill="#F4B740" opacity="0.35" stroke="none"/>
+
+    <!-- perimeter wall, right segment -->
+    <polygon points="276,270 400,208 400,148 276,210" fill="url(#metalGrad)"/>
+    <polygon points="276,210 400,148 412,154 288,216" fill="#596270"/>
+    <polygon points="276,270 288,276 288,216 276,210" fill="#39414B"/>
+    <polygon points="400,208 412,214 412,154 400,148" fill="#252B33"/>
+    <polygon points="280,264 396,206 396,198 280,256" fill="#F4B740" opacity="0.35" stroke="none"/>
+
+    <!-- gate pylons -->
+    <polygon points="188,314 220,298 220,202 188,218" fill="url(#metalGrad)"/>
+    <polygon points="188,218 220,202 240,212 208,228" fill="#596270"/>
+    <polygon points="220,298 240,308 240,212 220,202" fill="#252B33"/>
+    <polygon points="260,278 292,262 292,166 260,182" fill="url(#metalGrad)"/>
+    <polygon points="260,182 292,166 312,176 280,192" fill="#596270"/>
+    <polygon points="292,262 312,272 312,176 292,166" fill="#252B33"/>
+
+    <!-- gate header beam -->
+    <polygon points="216,216 264,192 264,176 216,200" fill="#39414B"/>
+    <polygon points="216,200 264,176 276,182 228,206" fill="#596270"/>
+
+    <!-- beacon bases -->
+    <ellipse cx="214" cy="213" rx="6" ry="3" fill="#252B33"/>
+    <ellipse cx="286" cy="178" rx="6" ry="3" fill="#252B33"/>
+
+    <!-- sliding gate door (half raised) -->
+    <g id="door">
+      <polygon points="222,262 258,244 258,198 222,216" fill="#39414B"/>
+      <line x1="227" y1="249" x2="253" y2="236" stroke="#F4B740" stroke-width="4" opacity="0.85"/>
+      <line x1="227" y1="233" x2="253" y2="220" stroke="#F4B740" stroke-width="4" opacity="0.85"/>
+      <polygon points="222,262 258,244 258,238 222,256" fill="#252B33"/>
+    </g>
+
+    <!-- data pipe, front segment -->
+    <polygon points="246,267 360,324 360,348 246,291" fill="url(#metalGrad)"/>
+    <rect x="247" y="266" width="8" height="32" rx="2" fill="#596270"/>
+    <rect x="354" y="320" width="10" height="32" rx="3" fill="#596270"/>
+
+    <!-- secrets vault bunker -->
+    <polygon points="352,330 432,290 432,220 352,260" fill="url(#metalGrad)"/>
+    <polygon points="352,260 432,220 456,232 376,272" fill="#596270"/>
+    <polygon points="432,290 456,302 456,232 432,220" fill="#252B33"/>
+    <ellipse cx="392" cy="277" rx="30" ry="22" transform="rotate(-26.57 392 277)" fill="#596270"/>
+    <g id="vault-door">
+      <ellipse cx="392" cy="277" rx="23" ry="16" transform="rotate(-26.57 392 277)" fill="#39414B"/>
+      <g id="wheel">
+        <ellipse cx="392" cy="277" rx="13" ry="9" transform="rotate(-26.57 392 277)" fill="#252B33"/>
+        <line x1="392" y1="277" x2="402" y2="270"/>
+        <line x1="392" y1="277" x2="384" y2="270"/>
+        <line x1="392" y1="277" x2="392" y2="287"/>
+        <circle cx="392" cy="277" r="3" fill="#596270"/>
+      </g>
+    </g>
+
+    <!-- patrol drone -->
+    <g id="drone">
+      <line x1="140" y1="123" x2="130" y2="117"/>
+      <line x1="162" y1="123" x2="172" y2="117"/>
+      <ellipse cx="129" cy="116" rx="9" ry="3" fill="#596270" opacity="0.9"/>
+      <ellipse cx="173" cy="116" rx="9" ry="3" fill="#596270" opacity="0.9"/>
+      <rect x="137" y="120" width="28" height="12" rx="5" fill="#39414B"/>
+      <rect x="145" y="114" width="12" height="8" rx="3" fill="#596270"/>
+    </g>
+
+    <!-- access terminal -->
+    <polygon points="294,326 318,314 318,296 294,308" fill="url(#metalGrad)"/>
+    <polygon points="294,308 318,296 326,300 302,312" fill="#596270"/>
+    <polygon points="318,314 326,318 326,300 318,296" fill="#252B33"/>
+  </g>
+
+  <g id="glass">
+    <polygon points="104,340 140,322 140,310 104,328" fill="url(#glassGrad)"/>
+    <polygon points="152,316 188,298 188,286 152,304" fill="url(#glassGrad)"/>
+    <polygon points="300,246 336,228 336,216 300,234" fill="url(#glassGrad)"/>
+    <polygon points="348,222 384,204 384,192 348,210" fill="url(#glassGrad)"/>
+    <polygon points="140,220 186,243 186,255 140,232" fill="url(#glassGrad)"/>
+    <polygon points="250,275 360,330 360,342 250,287" fill="url(#glassGrad)"/>
+    <polygon points="297,322 315,313 315,301 297,310" fill="url(#glassGrad)" id="screen"/>
+    <polygon points="438,272 450,278 450,262 438,256" fill="url(#glassGrad)"/>
+  </g>
+
+  <g id="water">
+    <polygon points="142,223 184,244 184,252 142,231" fill="#00CFFF" opacity="0.35" stroke="none"/>
+    <polygon points="252,278 358,331 358,339 252,286" fill="#00CFFF" opacity="0.35" stroke="none"/>
+    <rect x="-8" y="-4" width="16" height="8" rx="3" transform="translate(153,233) rotate(26.6)" fill="#00CFFF" stroke="none" filter="url(#glow)"/>
+    <rect x="-8" y="-4" width="16" height="8" rx="3" transform="translate(175,244) rotate(26.6)" fill="#00CFFF" stroke="none" filter="url(#glow)"/>
+    <rect x="-8" y="-4" width="16" height="8" rx="3" transform="translate(261,287) rotate(26.6)" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <rect x="-8" y="-4" width="16" height="8" rx="3" transform="translate(290,301) rotate(26.6)" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <rect x="-8" y="-4" width="16" height="8" rx="3" transform="translate(320,316) rotate(26.6)" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+  </g>
+
+  <g id="lights">
+    <!-- floodlight wash -->
+    <polygon points="82,248 94,244 148,390 60,400" fill="#F4B740" opacity="0.08" stroke="none"/>
+    <circle cx="88" cy="244" r="2.5" fill="#F4B740" stroke="none" filter="url(#glow)"/>
+
+    <!-- gate scanner curtain -->
+    <g id="scanner">
+      <polygon points="222,296 258,278 258,244 222,262" fill="#6CD8FF" opacity="0.13" stroke="none">
+        <animate attributeName="opacity" values="0.13;0.4;0.13;0.13" keyTimes="0;0.4;0.6;1" dur="3s" repeatCount="indefinite"/>
+      </polygon>
+      <line x1="225" y1="281" x2="255" y2="266" stroke="#6CD8FF" stroke-width="2.5" opacity="0.9" filter="url(#glow)"/>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,32" dur="1.6s" repeatCount="indefinite"/>
+        <line x1="222" y1="262" x2="258" y2="244" stroke="#6CD8FF" stroke-width="3" opacity="0" filter="url(#glow)">
+          <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="1.6s" repeatCount="indefinite"/>
+        </line>
+      </g>
+    </g>
+
+    <!-- status beacons and LEDs -->
+    <circle cx="286" cy="173" r="5" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <circle cx="280" cy="230" r="2.2" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <circle cx="280" cy="238" r="2.2" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <circle cx="280" cy="246" r="2.2" fill="#F4B740" stroke="none" filter="url(#glow)"/>
+    <ellipse cx="404" cy="245" rx="5" ry="2.5" fill="#252B33" stroke="none"/>
+    <circle cx="404" cy="240" r="4" fill="#F4B740" stroke="none" filter="url(#glow)"/>
+    <circle cx="444" cy="250" r="2.5" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <circle cx="136" cy="154" r="2.5" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+
+    <!-- drone lamp and scan cone -->
+    <circle cx="151" cy="135" r="3" fill="#2EE66B" stroke="none" filter="url(#glow)"/>
+    <polygon points="146,133 156,133 176,290 120,296" fill="#6CD8FF" opacity="0.1" stroke="none"/>
+
+    <!-- terminal readout -->
+    <line x1="300" y1="317" x2="311" y2="312" stroke="#2EE66B" stroke-width="2" opacity="0.9" filter="url(#glow)"/>
+    <line x1="300" y1="321" x2="307" y2="318" stroke="#2EE66B" stroke-width="2" opacity="0.9" filter="url(#glow)"/>
+
+    <!-- threat blocked at the checkpoint -->
+    <g id="warning">
+      <circle cx="214" cy="208" r="5" fill="#FF5A5A" stroke="none" filter="url(#glow)">
+        <animate attributeName="r" values="5;9;5;8;5" keyTimes="0;0.05;0.25;0.5;0.65" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.45;1;0.6;1" keyTimes="0;0.05;0.25;0.5;0.65" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <line x1="226" y1="251" x2="226" y2="287" stroke="#FF5A5A" stroke-width="2" opacity="0.85" filter="url(#glow)">
+        <animate attributeName="opacity" values="0.5;0.5;1;1;0.5" keyTimes="0;0.45;0.5;0.55;1" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="238" y1="257" x2="238" y2="293" stroke="#FF5A5A" stroke-width="2" opacity="0.85" filter="url(#glow)">
+        <animate attributeName="opacity" values="0.5;0.5;1;1;0.5" keyTimes="0;0.45;0.5;0.55;1" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0;18,76;18,76" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite"/>
+        <rect x="-8" y="-4" width="16" height="8" rx="3" transform="translate(214,208) rotate(26.6)" fill="#FF5A5A" stroke="#20242A" filter="url(#glow)">
+          <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.58;1" dur="3s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+
+  <g id="bolts">
+    <use xlink:href="#bolt" x="104" y="306"/>
+    <use xlink:href="#bolt" x="144" y="286"/>
+    <use xlink:href="#bolt" x="184" y="266"/>
+    <use xlink:href="#bolt" x="304" y="206"/>
+    <use xlink:href="#bolt" x="344" y="186"/>
+    <use xlink:href="#bolt" x="384" y="166"/>
+    <use xlink:href="#bolt" x="196" y="302"/>
+    <use xlink:href="#bolt" x="196" y="226"/>
+    <use xlink:href="#bolt" x="268" y="268"/>
+    <use xlink:href="#bolt" x="268" y="190"/>
+    <use xlink:href="#bolt" x="224" y="204"/>
+    <use xlink:href="#bolt" x="256" y="188"/>
+    <use xlink:href="#bolt" x="416" y="265"/>
+    <use xlink:href="#bolt" x="411" y="286"/>
+    <use xlink:href="#bolt" x="388" y="298"/>
+    <use xlink:href="#bolt" x="368" y="289"/>
+    <use xlink:href="#bolt" x="373" y="268"/>
+    <use xlink:href="#bolt" x="397" y="256"/>
+    <use xlink:href="#bolt" x="139" y="217"/>
+    <use xlink:href="#bolt" x="139" y="235"/>
+    <use xlink:href="#bolt" x="359" y="327"/>
+    <use xlink:href="#bolt" x="359" y="345"/>
+  </g>
+
+  <g id="overlay" stroke="#596270" opacity="0.5">
+    <line x1="80" y1="308" x2="204" y2="246"/>
+    <line x1="276" y1="210" x2="400" y2="148"/>
+    <line x1="188" y1="218" x2="188" y2="314"/>
+    <line x1="260" y1="182" x2="260" y2="278"/>
+    <line x1="352" y1="260" x2="432" y2="220"/>
+  </g>
+</svg>

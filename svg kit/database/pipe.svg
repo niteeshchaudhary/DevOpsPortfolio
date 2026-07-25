@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A6D6" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00A6D6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00A6D6" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <rect x="8" y="28" width="48" height="8" rx="4" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Pipe Body -->
+  <g id="metal">
+    <rect x="8" y="24" width="48" height="16" rx="8" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="8" y="24" width="48" height="8" rx="8" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Glass Window -->
+  <g id="glass">
+    <rect x="20" y="26" width="24" height="12" rx="6" fill="url(#glassGradient)" stroke="#00A6D6" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Water Flow -->
+  <g id="water">
+    <rect x="22" y="28" width="20" height="8" rx="4" fill="#00D5FF" opacity="0.8"/>
+  </g>
+  
+  <!-- Flow Direction Arrow -->
+  <g id="arrow">
+    <path d="M38 32 L44 32 L42 30 M42 34 L44 32" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="14" y="28"/>
+    <use href="#bolt" x="14" y="36"/>
+    <use href="#bolt" x="50" y="28"/>
+    <use href="#bolt" x="50" y="36"/>
+  </g>
+</svg>

@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6470"/>
+      <stop offset="0.5" stop-color="#3C434D"/>
+      <stop offset="1" stop-color="#262C34"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#00B4FF" stop-opacity="0.20"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <polygon id="winL" points="0,0 12,6 12,20 0,14"/>
+    <polygon id="winR" points="0,6 12,0 12,14 0,20"/>
+    <g id="bolt">
+      <circle r="4" fill="#596270" stroke="#20242A" stroke-width="2"/>
+      <circle r="1.8" fill="#252B33"/>
+      <circle cx="-1.2" cy="-1.2" r="0.8" fill="#FFFFFF" opacity="0.35"/>
+    </g>
+    <g id="lamp">
+      <rect x="-2" y="-30" width="4" height="30" rx="2" fill="#39414B"/>
+      <rect x="-8" y="-38" width="16" height="9" rx="3" fill="#252B33"/>
+    </g>
+  </defs>
+
+  <g id="shadow" fill="rgba(0,0,0,0.35)" stroke="none">
+    <polygon points="262,236 506,358 262,480 18,358"/>
+  </g>
+
+  <g id="metal" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="256,230 500,352 256,474 12,352" fill="#252B33"/>
+    <polygon points="12,352 256,474 500,352 500,360 256,482 12,360" fill="#171C24"/>
+    <path d="M12,352 L256,230 L500,352" fill="none" stroke="#596270" stroke-opacity="0.5"/>
+    <g id="contact-shadows" fill="rgba(0,0,0,0.35)" stroke="none">
+      <ellipse cx="294" cy="270" rx="38" ry="12"/>
+      <ellipse cx="196" cy="278" rx="28" ry="10"/>
+      <ellipse cx="356" cy="282" rx="26" ry="9"/>
+      <ellipse cx="140" cy="304" rx="34" ry="12"/>
+      <ellipse cx="404" cy="308" rx="34" ry="12"/>
+      <ellipse cx="430" cy="380" rx="24" ry="8"/>
+      <ellipse cx="130" cy="398" rx="22" ry="8"/>
+      <ellipse cx="268" cy="408" rx="42" ry="13"/>
+      <ellipse cx="168" cy="420" rx="18" ry="7"/>
+      <ellipse cx="48" cy="340" rx="12" ry="4"/>
+      <ellipse cx="476" cy="346" rx="12" ry="4"/>
+    </g>
+    <polygon points="84,326 108,314 332,426 308,438" fill="#171C24"/>
+    <polygon points="172,430 196,442 428,326 404,314" fill="#171C24"/>
+    <polygon points="343,356 361,348 313,324 295,332" fill="#171C24"/>
+    <polygon points="36,338 52,338 46,294 42,294" fill="#39414B"/>
+    <rect x="30" y="296" width="26" height="5" rx="2" fill="#39414B"/>
+    <polygon points="464,344 480,344 474,300 470,300" fill="#39414B"/>
+    <rect x="458" y="302" width="26" height="5" rx="2" fill="#39414B"/>
+    <path d="M46,296 Q72,308 100,270" fill="none" stroke="#596270"/>
+    <path d="M472,304 Q462,302 450,292" fill="none" stroke="#596270"/>
+
+    <polygon points="250,262 280,277 280,137 250,122" fill="url(#metalGrad)"/>
+    <polygon points="280,277 310,262 310,122 280,137" fill="#252B33"/>
+    <polygon points="280,107 310,122 280,137 250,122" fill="#39414B"/>
+    <polygon id="door" points="288,273 300,267 300,249 288,255" fill="#171C24"/>
+    <rect x="277" y="74" width="6" height="34" rx="2" fill="#39414B"/>
+
+    <polygon points="160,272 184,284 184,196 160,184" fill="url(#metalGrad)"/>
+    <polygon points="184,284 208,272 208,184 184,196" fill="#252B33"/>
+    <polygon points="184,172 208,184 184,196 160,184" fill="#39414B"/>
+
+    <polygon points="322,276 344,287 344,215 322,204" fill="url(#metalGrad)"/>
+    <polygon points="344,287 366,276 366,204 344,215" fill="#252B33"/>
+    <polygon points="344,193 366,204 344,215 322,204" fill="#39414B"/>
+
+    <polygon points="100,296 128,310 128,200 100,186" fill="url(#metalGrad)"/>
+    <polygon points="128,310 156,296 156,186 128,200" fill="#252B33"/>
+    <polygon points="128,172 156,186 128,200 100,186" fill="#39414B"/>
+    <polygon points="130,188 138,192 138,184 130,180" fill="url(#metalGrad)"/>
+    <polygon points="138,192 146,188 146,180 138,184" fill="#252B33"/>
+    <polygon points="138,176 146,180 138,184 130,180" fill="#39414B"/>
+    <g id="fan" stroke-width="1.5">
+      <ellipse cx="138" cy="180" rx="4" ry="2" fill="#252B33"/>
+      <line x1="135" y1="180" x2="141" y2="180" stroke="#596270"/>
+    </g>
+
+    <polygon points="364,300 392,314 392,218 364,204" fill="url(#metalGrad)"/>
+    <polygon points="392,314 420,300 420,204 392,218" fill="#252B33"/>
+    <polygon points="392,190 420,204 392,218 364,204" fill="#39414B"/>
+    <rect x="391" y="199" width="18" height="10" rx="2" fill="url(#metalGrad)"/>
+    <ellipse cx="400" cy="199" rx="9" ry="4" fill="#596270"/>
+
+    <path d="M20,110 L72,136 L72,320 L224,396" fill="none" stroke="#20242A" stroke-width="18"/>
+    <path d="M20,110 L72,136 L72,320 L224,396" fill="none" stroke="#39414B" stroke-width="14"/>
+    <rect x="146" y="364" width="8" height="12" rx="2" fill="#39414B"/>
+
+    <rect x="402" y="316" width="5" height="68" rx="2" fill="#39414B"/>
+    <rect x="441" y="316" width="5" height="68" rx="2" fill="#39414B"/>
+    <rect x="416" y="310" width="4" height="58" rx="2" fill="#39414B"/>
+    <rect x="430" y="310" width="4" height="58" rx="2" fill="#39414B"/>
+    <line x1="404" y1="336" x2="444" y2="362" stroke="#39414B"/>
+    <line x1="444" y1="336" x2="404" y2="362" stroke="#39414B"/>
+    <path d="M424,326 L424,378" fill="none" stroke="#20242A" stroke-width="13"/>
+    <path d="M424,326 L424,378" fill="none" stroke="#39414B" stroke-width="9"/>
+    <ellipse cx="424" cy="380" rx="9" ry="4" fill="#252B33"/>
+    <path d="M398,284 L398,312 A26,11 0 0 0 450,312 L450,284 Z" fill="url(#metalGrad)"/>
+    <ellipse cx="424" cy="284" rx="26" ry="11" fill="#596270"/>
+
+    <polygon points="102,392 120,401 120,371 102,362" fill="url(#metalGrad)"/>
+    <polygon points="120,401 138,392 138,362 120,371" fill="#252B33"/>
+    <polygon points="120,353 138,362 120,371 102,362" fill="#39414B"/>
+
+    <g id="hub">
+      <polygon points="220,400 256,418 256,384 220,366" fill="url(#metalGrad)"/>
+      <polygon points="256,418 292,400 292,366 256,384" fill="#252B33"/>
+      <polygon points="256,348 292,366 256,384 220,366" fill="#39414B"/>
+      <rect x="240" y="354" width="32" height="12" rx="3" fill="url(#metalGrad)"/>
+      <ellipse cx="256" cy="354" rx="16" ry="7" fill="#596270"/>
+    </g>
+
+    <use href="#lamp" x="208" y="412"/>
+    <use href="#lamp" x="304" y="412"/>
+
+    <polygon points="144,416 160,424 160,400 144,392" fill="url(#metalGrad)"/>
+    <polygon points="160,424 176,416 176,392 160,400" fill="#252B33"/>
+    <polygon points="160,384 176,392 160,400 144,392" fill="#39414B"/>
+    <polygon points="148,418 157,422 157,404 148,400" fill="#171C24"/>
+  </g>
+
+  <g id="glass" stroke="#20242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="url(#glassGrad)">
+      <use href="#winL" x="103" y="200"/><use href="#winL" x="116" y="207"/>
+      <use href="#winL" x="103" y="230"/><use href="#winL" x="116" y="237"/>
+      <use href="#winL" x="103" y="260"/><use href="#winL" x="116" y="267"/>
+      <use href="#winR" x="131" y="208"/><use href="#winR" x="144" y="201"/>
+      <use href="#winR" x="131" y="238"/><use href="#winR" x="144" y="231"/>
+      <use href="#winL" x="163" y="198"/><use href="#winL" x="176" y="205"/>
+      <use href="#winL" x="163" y="226"/><use href="#winL" x="176" y="233"/>
+      <use href="#winR" x="187" y="206"/><use href="#winR" x="200" y="199"/>
+      <use href="#winR" x="187" y="234"/><use href="#winR" x="200" y="227"/>
+      <use href="#winL" x="253" y="140"/><use href="#winL" x="267" y="147"/>
+      <use href="#winL" x="253" y="170"/><use href="#winL" x="267" y="177"/>
+      <use href="#winL" x="253" y="200"/><use href="#winL" x="267" y="207"/>
+      <use href="#winL" x="253" y="228"/><use href="#winL" x="267" y="235"/>
+      <use href="#winR" x="284" y="152"/><use href="#winR" x="297" y="146"/>
+      <use href="#winL" x="325" y="216"/><use href="#winL" x="338" y="223"/>
+      <use href="#winL" x="325" y="242"/><use href="#winL" x="338" y="249"/>
+      <use href="#winR" x="347" y="224"/><use href="#winR" x="360" y="217"/>
+      <use href="#winL" x="367" y="218"/><use href="#winL" x="380" y="225"/>
+      <use href="#winL" x="367" y="246"/><use href="#winL" x="380" y="253"/>
+      <use href="#winL" x="367" y="274"/><use href="#winL" x="380" y="281"/>
+      <use href="#winR" x="395" y="226"/><use href="#winR" x="408" y="219"/>
+      <use href="#winR" x="395" y="254"/><use href="#winR" x="408" y="247"/>
+      <use href="#winL" x="105" y="370"/><use href="#winR" x="123" y="372"/>
+    </g>
+    <polygon id="screen" points="284,238 306,227 306,180 284,191" fill="#171C24"/>
+    <polygon points="260,396 280,386 280,372 260,382" fill="url(#glassGrad)"/>
+    <rect x="408" y="298" width="32" height="8" rx="3" fill="url(#glassGrad)"/>
+    <path d="M20,110 L72,136 L72,320 L224,396" fill="none" stroke="#6CD8FF" stroke-opacity="0.2" stroke-width="7"/>
+    <path d="M424,326 L424,378" fill="none" stroke="#6CD8FF" stroke-opacity="0.2" stroke-width="4"/>
+  </g>
+
+  <g id="water" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g filter="url(#glow)">
+      <path id="deploy-flow" d="M20,110 L72,136 L72,320 L216,392" stroke="#FF8F1F" stroke-width="4" stroke-dasharray="14 10"/>
+      <path id="stream-in" d="M320,432 L280,412" stroke="#00CFFF" stroke-width="4" stroke-dasharray="12 9"/>
+      <path id="stream-a" d="M212,378 L96,320" stroke="#00CFFF" stroke-width="4" stroke-dasharray="12 9"/>
+      <path id="stream-b" d="M300,378 L396,330" stroke="#00CFFF" stroke-width="4" stroke-dasharray="12 9"/>
+      <path id="stream-c" d="M352,352 L304,328" stroke="#00CFFF" stroke-width="4" stroke-dasharray="12 9"/>
+      <path id="stream-d" d="M228,414 L184,436" stroke="#00CFFF" stroke-width="4" stroke-dasharray="12 9"/>
+      <path id="wt-flow" d="M424,330 L424,374" stroke="#00CFFF" stroke-width="3" stroke-dasharray="8 7"/>
+      <rect id="tank-level" x="410" y="300" width="22" height="4" rx="2" fill="#00CFFF" stroke="none"/>
+      <circle id="dot-a" cx="176" cy="360" r="2" fill="#6CD8FF" stroke="none"/>
+      <circle id="dot-b" cx="348" cy="354" r="2" fill="#6CD8FF" stroke="none"/>
+      <circle id="dot-in" cx="300" cy="422" r="2" fill="#6CD8FF" stroke="none"/>
+    </g>
+  </g>
+
+  <g id="lights" stroke="none">
+    <g filter="url(#glow)" fill="#6CD8FF" opacity="0.9">
+      <use href="#winL" x="103" y="230"/>
+      <use href="#winR" x="144" y="201"/>
+      <use href="#winL" x="176" y="205"/>
+      <use href="#winR" x="200" y="199"/>
+      <use href="#winL" x="253" y="170"/>
+      <use href="#winL" x="267" y="207"/>
+      <use href="#winR" x="284" y="152"/>
+      <use href="#winL" x="338" y="223"/>
+      <use href="#winL" x="380" y="225"/>
+      <use href="#winR" x="395" y="254"/>
+    </g>
+    <g filter="url(#glow)">
+      <polygon points="288,226 302,219 302,214 288,221" fill="#2EE66B"/>
+      <polygon points="288,214 296,210 296,205 288,209" fill="#6CD8FF"/>
+      <polygon points="288,202 300,196 300,191 288,197" fill="#FF8F1F"/>
+      <circle cx="263" cy="352" r="2.5" fill="#2EE66B"/>
+      <circle cx="226" cy="390" r="2" fill="#2EE66B"/>
+      <circle cx="234" cy="394" r="2" fill="#2EE66B"/>
+      <circle cx="242" cy="398" r="2" fill="#2EE66B"/>
+      <circle cx="134" cy="182" r="2.5" fill="#2EE66B"/>
+      <circle cx="190" cy="180" r="2.5" fill="#2EE66B"/>
+      <circle cx="266" cy="116" r="2.5" fill="#2EE66B"/>
+      <circle cx="350" cy="202" r="2.5" fill="#2EE66B"/>
+      <circle cx="378" cy="200" r="2.5" fill="#2EE66B"/>
+      <circle cx="442" cy="290" r="2.5" fill="#2EE66B"/>
+      <circle cx="280" cy="92" r="1.5" fill="#2EE66B"/>
+      <circle id="beacon" cx="280" cy="70" r="3" fill="#F4B740"/>
+      <circle cx="208" cy="379" r="4" fill="#F4B740"/>
+      <circle cx="304" cy="379" r="4" fill="#F4B740"/>
+    </g>
+    <ellipse cx="208" cy="416" rx="14" ry="5" fill="#F4B740" opacity="0.12"/>
+    <ellipse cx="304" cy="416" rx="14" ry="5" fill="#F4B740" opacity="0.12"/>
+  </g>
+
+  <g id="bolts">
+    <use href="#bolt" x="72" y="144"/>
+    <use href="#bolt" x="72" y="314"/>
+    <use href="#bolt" x="248" y="408"/>
+    <use href="#bolt" x="284" y="398"/>
+    <use href="#bolt" x="404" y="291"/>
+    <use href="#bolt" x="444" y="291"/>
+    <use href="#bolt" x="43" y="300"/>
+    <use href="#bolt" x="471" y="306"/>
+    <use href="#bolt" x="150" y="426"/>
+    <use href="#bolt" x="362" y="426"/>
+  </g>
+
+  <g id="overlay" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="280" cy="124" rx="16" ry="8" stroke="#596270" stroke-width="2" stroke-dasharray="6 5" stroke-opacity="0.7"/>
+  </g>
+</svg>

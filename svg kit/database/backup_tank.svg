@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="dbGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00A6D6" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00A6D6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00A6D6" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="32" cy="52" rx="12" ry="3" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Backup Tank Body -->
+  <g id="tank">
+    <ellipse cx="32" cy="48" rx="12" ry="4" fill="url(#dbGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="20" y="28" width="24" height="20" rx="0" fill="url(#dbGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <ellipse cx="32" cy="28" rx="12" ry="4" fill="url(#dbGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="20" y="28" width="24" height="10" rx="0" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Sync Indicator -->
+  <g id="sync">
+    <circle cx="32" cy="38" r="5" fill="#1A1F26" stroke="#4D5664" stroke-width="1"/>
+    <path d="M30 36 L32 38 L34 36" stroke="#44FF44" stroke-width="1.5" fill="none" filter="url(#greenGlow)"/>
+    <path d="M34 40 L32 38 L30 40" stroke="#44FF44" stroke-width="1.5" fill="none" filter="url(#greenGlow)"/>
+  </g>
+  
+  <!-- Top Fitting -->
+  <g id="fitting">
+    <rect x="29" y="22" width="6" height="6" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="1"/>
+  </g>
+  
+  <!-- Status LED -->
+  <g id="led">
+    <circle cx="32" cy="25" r="1.5" fill="#44FF44" filter="url(#greenGlow)"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="22" y="30"/>
+    <use href="#bolt" x="42" y="30"/>
+    <use href="#bolt" x="22" y="46"/>
+    <use href="#bolt" x="42" y="46"/>
+  </g>
+</svg>

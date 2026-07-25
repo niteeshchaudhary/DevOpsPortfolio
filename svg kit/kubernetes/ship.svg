@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="hullGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A6575"/>
+      <stop offset="50%" stop-color="#404A57"/>
+      <stop offset="100%" stop-color="#252D38"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Water Shadow -->
+  <ellipse cx="32" cy="50" rx="24" ry="4" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Water -->
+  <g id="water">
+    <path d="M8 50 Q16 48 24 50 Q32 48 40 50 Q48 48 56 50" stroke="#00D5FF" stroke-width="2" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- Hull -->
+  <g id="hull">
+    <path d="M12 36 L52 36 L48 48 Q32 52 16 48 Z" fill="url(#hullGradient)" stroke="#1A1F26" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M12 36 L52 36 L50 40 Q32 44 14 40 Z" fill="url(#highlightGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Deck -->
+  <g id="deck">
+    <rect x="16" y="32" width="32" height="6" rx="1" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="1"/>
+  </g>
+  
+  <!-- Bridge -->
+  <g id="bridge">
+    <rect x="36" y="24" width="10" height="10" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <rect x="38" y="26" width="6" height="4" rx="1" fill="#00A6D6" opacity="0.6"/>
+  </g>
+  
+  <!-- Smokestack -->
+  <g id="smokestack">
+    <rect x="24" y="26" width="6" height="8" rx="2" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="1"/>
+    <rect x="25" y="24" width="4" height="3" rx="1" fill="#1A1F26"/>
+  </g>
+  
+  <!-- Containers on Deck -->
+  <g id="containers">
+    <rect x="18" y="33" width="6" height="4" rx="1" fill="#3B82F6" stroke="#1A1F26" stroke-width="0.5"/>
+    <rect x="26" y="33" width="6" height="4" rx="1" fill="#2563EB" stroke="#1A1F26" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Navigation Light -->
+  <g id="light">
+    <circle cx="41" cy="28" r="1.5" fill="#44FF44" filter="url(#cyanGlow)"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="18" y="38"/>
+    <use href="#bolt" x="46" y="38"/>
+  </g>
+</svg>

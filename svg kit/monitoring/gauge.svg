@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D5664"/>
+      <stop offset="50%" stop-color="#343B46"/>
+      <stop offset="100%" stop-color="#1D232C"/>
+    </linearGradient>
+    <linearGradient id="faceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D3440"/>
+      <stop offset="100%" stop-color="#1A1F26"/>
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="amberGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <circle cx="32" cy="48" r="12" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+  
+  <!-- Gauge Body -->
+  <g id="body">
+    <circle cx="32" cy="32" r="16" fill="url(#metalGradient)" stroke="#1A1F26" stroke-width="2"/>
+    <circle cx="32" cy="32" r="14" fill="url(#faceGradient)" stroke="#2D3440" stroke-width="1"/>
+  </g>
+  
+  <!-- Scale Marks -->
+  <g id="scale">
+    <path d="M32 22 L32 26" stroke="#4D5664" stroke-width="1.5"/>
+    <path d="M42 32 L46 32" stroke="#4D5664" stroke-width="1.5"/>
+    <path d="M32 42 L32 46" stroke="#4D5664" stroke-width="1.5"/>
+    <path d="M22 32 L26 32" stroke="#4D5664" stroke-width="1.5"/>
+    <path d="M38 26 L40 28" stroke="#4D5664" stroke-width="1"/>
+    <path d="M38 38 L40 36" stroke="#4D5664" stroke-width="1"/>
+    <path d="M26 38 L24 36" stroke="#4D5664" stroke-width="1"/>
+    <path d="M26 26 L24 28" stroke="#4D5664" stroke-width="1"/>
+  </g>
+  
+  <!-- Needle -->
+  <g id="needle">
+    <path d="M32 32 L32 24 L34 32" fill="#FF4444" stroke="#1A1F26" stroke-width="0.5" id="gaugeNeedle"/>
+    <circle cx="32" cy="32" r="2" fill="#1A1F26"/>
+  </g>
+  
+  <!-- Value Display -->
+  <g id="value">
+    <text x="32" y="38" font-size="4" fill="#00D5FF" text-anchor="middle" font-family="monospace">75%</text>
+  </g>
+  
+  <!-- Status LEDs -->
+  <g id="leds">
+    <circle cx="24" cy="44" r="1.5" fill="#44FF44" filter="url(#greenGlow)"/>
+    <circle cx="32" cy="44" r="1.5" fill="#FFAA00" filter="url(#amberGlow)"/>
+    <circle cx="40" cy="44" r="1.5" fill="#FF4444" filter="url(#redGlow)"/>
+  </g>
+  
+  <!-- Bolts -->
+  <g id="bolts">
+    <use href="#bolt" x="28" y="20"/>
+    <use href="#bolt" x="36" y="20"/>
+    <use href="#bolt" x="28" y="44"/>
+    <use href="#bolt" x="36" y="44"/>
+  </g>
+</svg>
