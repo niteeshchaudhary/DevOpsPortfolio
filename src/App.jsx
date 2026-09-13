@@ -3,6 +3,7 @@ import Loader from './components/Loader'
 import ProgressBar from './components/ProgressBar'
 import WorldBackground from './components/WorldBackground'
 import AtmosphereLayer from './components/AtmosphereLayer'
+import GlyphRain from './components/GlyphRain'
 import MechanicalDirector from './world/MechanicalDirector'
 import HeroScene from './sections/HeroScene'
 import GitSection from './sections/GitSection'
@@ -27,6 +28,7 @@ export default function App() {
       <MechanicalDirector />
       <ProgressBar />
       <SiteNav />
+      <GlyphRain />
       <main className="relative z-10">
         <HeroScene />
         <GitSection />

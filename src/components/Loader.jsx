@@ -80,14 +80,12 @@ export default function Loader() {
           <AsciiPortrait color="#00CFFF" />
         </div>
 
-        <div className="bg-[#0D1117] border border-[#262C34] rounded-md px-4 py-3 w-[min(92vw,440px)]" style={{ fontFamily: 'IBM Plex Mono' }}>
-          <div className="flex items-center gap-2 mb-2 border-b border-[#171C24] pb-1.5">
-            <span className="w-2 h-2 rounded-full bg-[#FF5A5A] opacity-70" />
-            <span className="w-2 h-2 rounded-full bg-[#F4B740] opacity-70" />
-            <span className="w-2 h-2 rounded-full bg-[#2EE66B] opacity-70" />
-            <span className="text-[9px] text-[#596270] ml-1 tracking-wider">init — portfolio</span>
+        <div className="plant-panel overlay-card relative w-[min(92vw,440px)] px-4 py-3">
+          <div className="mb-2 flex items-center gap-2 border-b border-[#262C34] pb-1.5">
+            <span className="hero-led" />
+            <span className="plant-label">init — pipeline</span>
           </div>
-          <div className="text-[10px] leading-tight space-y-0.5 whitespace-nowrap">
+          <div className="space-y-0.5 whitespace-nowrap text-[10px] leading-tight" style={{ fontFamily: 'IBM Plex Mono' }}>
             {BOOT_LINES.slice(0, visibleLines).map((line, i) => (
               <div key={i} style={{ color: line.color }}>
                 {line.text}

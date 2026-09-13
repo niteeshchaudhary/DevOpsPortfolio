@@ -40,7 +40,7 @@ export default function SceneArt({ name, id }) {
       id={id}
       viewBox="0 0 1920 1080"
       preserveAspectRatio="none"
-      className="absolute inset-0 h-full w-full pointer-events-none"
+      className="absolute inset-0 z-0 h-full w-full pointer-events-none"
       aria-hidden
     >
       <LocalDefs />

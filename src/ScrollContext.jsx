@@ -11,18 +11,18 @@ export function ScrollProvider({ children }) {
   const [infraActive, setInfraActive] = useState(false);
 
   const sections = [
-    { id: 'hero', label: 'Git Push', color: '#00A7D6' },
-    { id: 'git', label: 'Repository', color: '#00A7D6' },
-    { id: 'ci', label: 'CI Factory', color: '#FF9800' },
-    { id: 'docker', label: 'Docker Factory', color: '#00A7D6' },
-    { id: 'registry', label: 'Registry', color: '#00A7D6' },
-    { id: 'kubernetes', label: 'K8s Harbor', color: '#00C853' },
-    { id: 'monitoring', label: 'Monitoring', color: '#00C853' },
-    { id: 'database', label: 'Database', color: '#4FC3F7' },
-    { id: 'cloud', label: 'Cloud', color: '#00A7D6' },
-    { id: 'security', label: 'Security', color: '#F4B740' },
-    { id: 'production', label: 'Production', color: '#00C853' },
-    { id: 'contact', label: 'Contact', color: '#00D5FF' },
+    { id: 'hero', label: 'ARRIVAL', color: '#00CFFF' },
+    { id: 'git', label: 'SOURCE', color: '#00CFFF' },
+    { id: 'pipeline', label: 'PIPELINE', color: '#00CFFF' },
+    { id: 'factory', label: 'FACTORY', color: '#FF8F1F' },
+    { id: 'registry', label: 'REGISTRY', color: '#00CFFF' },
+    { id: 'harbor', label: 'HARBOR', color: '#2EE66B' },
+    { id: 'monitor', label: 'MONITOR', color: '#B388FF' },
+    { id: 'database', label: 'DATABASE', color: '#4FC3F7' },
+    { id: 'cloud', label: 'CLOUD', color: '#00CFFF' },
+    { id: 'security', label: 'SECURITY', color: '#F4B740' },
+    { id: 'production', label: 'PRODUCTION', color: '#2EE66B' },
+    { id: 'finale', label: 'COMMS', color: '#00CFFF' },
   ];
 
   const getSectionProgress = useCallback((index) => {

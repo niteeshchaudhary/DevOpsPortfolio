@@ -18,8 +18,7 @@ export default function SiteNav() {
             e.preventDefault()
             document.querySelector(l.href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
           }}
-          className="border border-[#262C34] bg-[#0D1117]/90 px-2 py-1 text-[9px] tracking-[0.2em] text-[#596270] hover:border-[#00CFFF] hover:text-[#00CFFF]"
-          style={{ fontFamily: 'JetBrains Mono' }}
+          className="plant-btn px-2 py-1 text-[9px]"
         >
           {l.label}
         </a>
@@ -28,8 +27,7 @@ export default function SiteNav() {
         href={profile.github}
         target="_blank"
         rel="noopener noreferrer"
-        className="border border-[#262C34] bg-[#0D1117]/90 px-2 py-1 text-[9px] tracking-[0.2em] text-[#B388FF] hover:border-[#B388FF]"
-        style={{ fontFamily: 'JetBrains Mono' }}
+        className="plant-btn px-2 py-1 text-[9px]"
       >
         GH
       </a>

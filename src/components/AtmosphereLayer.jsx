@@ -43,7 +43,7 @@ export default function AtmosphereLayer() {
   }, [])
 
   return (
-    <div ref={ref} className="fixed inset-0 pointer-events-none z-[2]">
+    <div ref={ref} className="atmos-layer fixed inset-0 pointer-events-none z-[2]">
       <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
         {/* Rain overlay — heavy in Arrival/Source Control, fades */}
         <g id="atmos-rain" opacity="0.08">

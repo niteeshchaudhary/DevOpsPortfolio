@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, useMemo } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useScroll } from '../ScrollContext'
 import AsciiPortrait from '../components/AsciiPortrait'
 import SceneArt from '../world/SceneArt'
@@ -12,33 +12,6 @@ READY  plant online`
 
 function formatClock(d) {
   return d.toISOString().slice(11, 19) + 'Z'
-}
-
-function HeroRain() {
-  const cols = useMemo(() => (
-    Array.from({ length: 16 }, (_, i) => ({
-      left: `${4 + i * 6}%`,
-      delay: `${(i * 0.41) % 5}s`,
-      duration: `${7 + (i % 6)}s`,
-      text: Array.from({ length: 18 }, (__, j) => (
-        '0123456789ABCDEF'[((i * 7 + j * 13) % 16)]
-      )).join('\n'),
-    }))
-  ), [])
-
-  return (
-    <div className="hero-rain" aria-hidden>
-      {cols.map((c, i) => (
-        <pre
-          key={i}
-          className="hero-rain-col"
-          style={{ left: c.left, animationDelay: c.delay, animationDuration: c.duration }}
-        >
-          {c.text}
-        </pre>
-      ))}
-    </div>
-  )
 }
 
 export default function HeroScene() {
@@ -94,7 +67,6 @@ export default function HeroScene() {
     <section ref={sectionRef} id="section-hero" className="hero-root relative h-screen min-h-screen w-full overflow-hidden">
       <SceneArt name="arrival" id="hero-img" />
       <div className="hero-dim" />
-      <HeroRain />
       <div className="hero-scanlines" />
 
       <div className="hero-hud">
@@ -121,21 +93,21 @@ export default function HeroScene() {
               {profile.bio}
             </p>
 
-            <pre className="hero-tty" data-enter>
+            <pre className="hero-tty overlay-card plant-panel" data-enter>
               {typed}
               <span className="hero-block" />
             </pre>
 
             <div className="hero-actions" data-enter>
-              <a href="#section-pipeline" className="hero-cta" onClick={(e) => {
+              <a href="#section-pipeline" className="plant-btn plant-btn-fill" onClick={(e) => {
                 e.preventDefault()
                 document.querySelector('#section-pipeline')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }}>
                 <span className="hero-cta-key">↵</span>
                 enter the plant
               </a>
-              <a href={profile.github} target="_blank" rel="noopener noreferrer">github</a>
-              <a href={`mailto:${profile.email}`}>mail</a>
+              <a href={profile.github} target="_blank" rel="noopener noreferrer" className="plant-btn">github</a>
+              <a href={`mailto:${profile.email}`} className="plant-btn">mail</a>
             </div>
           </div>
 

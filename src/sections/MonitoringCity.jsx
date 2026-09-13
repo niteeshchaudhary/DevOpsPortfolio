@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { useScroll } from '../ScrollContext'
 import SceneArt from '../world/SceneArt'
-import { OverlayRail, SceneCaption } from '../components/OverlayPanel'
+import { PlantPanel, OverlayRail, SceneCaption } from '../components/OverlayPanel'
 import { sceneWork } from '../data/sceneWork'
 
 export default function MonitoringCity() {
@@ -14,18 +14,16 @@ export default function MonitoringCity() {
     <section ref={sectionRef} id="section-monitoring" className="district">
       <SceneArt name="monitor" id="mon-img" />
       <div className="district-stage">
-        <OverlayRail eyebrow={data.eyebrow} title={data.title} side="left">
+        <OverlayRail eyebrow={data.eyebrow} title={data.title}>
           {data.skills.map((g) => (
-            <div key={g.name} className="overlay-focus overlay-card relative w-full border border-[#00CFFF]/25 bg-[#0D1117]/88 p-4 backdrop-blur-md">
-              <p className="mb-2 text-[10px] tracking-[0.2em] text-[#B388FF]" style={{ fontFamily: 'JetBrains Mono' }}>{g.name.toUpperCase()}</p>
+            <PlantPanel key={g.name} className="w-full p-4">
+              <p className="plant-label mb-2">{g.name}</p>
               <div className="flex flex-wrap gap-1.5">
                 {g.items.map((s) => (
-                  <span key={s} className="border border-[#00CFFF]/25 px-2 py-1 text-[10px] text-[#C5EEFF]" style={{ fontFamily: 'IBM Plex Mono' }}>
-                    {s}
-                  </span>
+                  <span key={s} className="plant-chip px-2 py-1 text-[10px]">{s}</span>
                 ))}
               </div>
-            </div>
+            </PlantPanel>
           ))}
         </OverlayRail>
         <SceneCaption>MONITORING · SKILL UNITS HEALTHY</SceneCaption>
