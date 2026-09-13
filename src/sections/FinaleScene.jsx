@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { useScroll } from '../ScrollContext'
 import SceneArt from '../world/SceneArt'
+import ToolDecor from '../components/ToolDecor'
 import { OverlayRail, PlantPanel, SceneCaption } from '../components/OverlayPanel'
 import { profile, social } from '../data/profile'
 
@@ -12,6 +13,7 @@ export default function FinaleScene() {
   return (
     <section ref={sectionRef} id="section-finale" className="district">
       <SceneArt name="finale" id="finale-img" />
+      <ToolDecor district="finale" />
       <div className="district-stage">
         <OverlayRail eyebrow="COMMS" title={profile.name}>
           <PlantPanel className="w-full p-5">

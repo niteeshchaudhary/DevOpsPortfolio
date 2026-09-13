@@ -18,6 +18,7 @@ import SecurityDistrict from './sections/SecurityDistrict'
 import ProductionCity from './sections/ProductionCity'
 import FinaleScene from './sections/FinaleScene'
 import SiteNav from './components/SiteNav'
+import CursorFX from './components/CursorFX'
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
       <MechanicalDirector />
       <ProgressBar />
       <SiteNav />
+      <CursorFX />
       <GlyphRain />
       <main className="relative z-10">
         <HeroScene />

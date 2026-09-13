@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { useScroll } from '../ScrollContext'
 import SceneArt from '../world/SceneArt'
+import ToolDecor from '../components/ToolDecor'
 import { OverlayCard, OverlayRail, PlantPanel, SceneCaption } from '../components/OverlayPanel'
 import { sceneWork } from '../data/sceneWork'
 import { profile } from '../data/profile'
@@ -14,6 +15,7 @@ export default function SecurityDistrict() {
   return (
     <section ref={sectionRef} id="section-security" className="district">
       <SceneArt name="security" id="sec-img" />
+      <ToolDecor district="security" />
       <div className="district-stage">
         <OverlayRail eyebrow={data.eyebrow} title={data.title}>
           {data.projects.map((p) => <OverlayCard key={p.id} project={p} />)}

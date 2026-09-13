@@ -85,6 +85,7 @@ export function OverlayRail({ eyebrow, title, children }) {
         duration: 0.75,
         stagger: 0.14,
         ease: 'power3.out',
+        clearProps: 'filter',
         scrollTrigger: {
           trigger: root.closest('.district') || root,
           start: 'top 72%',
@@ -97,12 +98,12 @@ export function OverlayRail({ eyebrow, title, children }) {
   }, [])
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-[8vw] pb-[8vh] pt-[6vh]">
+    <div className="overlay-rail-frame pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-[8vw] pb-[8vh] pt-[6vh]">
       <div
         ref={ref}
-        className="pointer-events-auto flex max-h-full w-[min(86vw,420px)] flex-col gap-3 overflow-auto"
+        className="overlay-rail pointer-events-auto"
       >
-        <PlantPanel className="px-4 py-3">
+        <PlantPanel className="overlay-rail-head px-4 py-3">
           <p className="plant-label tracking-[0.32em]">◈ {eyebrow}</p>
           {title && (
             <p className="plant-title mt-1 text-base">{title}</p>

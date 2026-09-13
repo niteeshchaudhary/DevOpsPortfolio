@@ -40,6 +40,11 @@
     cursor: default;
   }
 
+  html.has-plant-cursor,
+  html.has-plant-cursor * {
+    cursor: none !important;
+  }
+
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -107,12 +112,33 @@
     min-height: 100vh;
   }
 
-  .district-stage {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-  }
+.district-stage {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.tool-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.tool-decor-icon {
+  position: absolute;
+  object-fit: contain;
+  opacity: 0.78;
+  filter: drop-shadow(0 0 10px rgba(0, 207, 255, 0.28));
+  animation: tool-float 5.6s ease-in-out infinite;
+}
+
+@keyframes tool-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -8px; }
+}
 }
 
 @keyframes crt-flicker {
@@ -176,6 +202,42 @@
 
 .overlay-card {
   animation: overlay-glow 2.8s ease-in-out infinite;
+}
+
+.overlay-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(86vw, 420px);
+  max-height: 100%;
+  overflow: auto;
+}
+
+@media (min-width: 1100px) {
+  .overlay-rail {
+    width: min(76vw, 980px);
+    gap: 16px;
+  }
+
+  .overlay-rail > * {
+    width: min(100%, 420px);
+    max-width: 420px;
+    flex: 0 0 auto;
+  }
+
+  .overlay-rail > .overlay-rail-head {
+    align-self: center;
+    width: min(100%, 440px);
+    max-width: 440px;
+  }
+
+  .overlay-rail > *:nth-child(even) {
+    align-self: flex-start;
+  }
+
+  .overlay-rail > *:nth-child(2n + 3) {
+    align-self: flex-end;
+  }
 }
 
 .plant-panel {
@@ -380,6 +442,108 @@ a.overlay-card:hover,
     rgba(0, 0, 0, 0.14) 2px 3px
   );
   opacity: 0.35;
+}
+
+.plant-cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+}
+
+.plant-cursor-dot,
+.plant-cursor-spark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.plant-cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: #00CFFF;
+  box-shadow: 0 0 8px #00CFFF;
+}
+
+.plant-cursor-dot.is-hot {
+  background: #2EE66B;
+  box-shadow: 0 0 10px #2EE66B;
+}
+
+.plant-cursor-dot.is-hot::before,
+.plant-cursor-dot.is-hot::after {
+  background: #2EE66B;
+}
+
+.plant-cursor-dot::before,
+.plant-cursor-dot::after {
+  content: '';
+  position: absolute;
+  background: #00CFFF;
+}
+
+.plant-cursor-dot::before {
+  width: 12px;
+  height: 1px;
+  left: -3px;
+  top: 2.5px;
+}
+
+.plant-cursor-dot::after {
+  width: 1px;
+  height: 12px;
+  left: 2.5px;
+  top: -3px;
+}
+
+.plant-cursor-spark {
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  background: #00CFFF;
+  box-shadow: 0 0 6px #00CFFF;
+}
+
+.plant-lit {
+  text-shadow: 0 0 10px rgba(0, 207, 255, 0.55);
+  transition: filter 0.12s ease, text-shadow 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.plant-lit.plant-panel,
+.plant-lit.overlay-card,
+.plant-lit.plant-btn,
+.plant-lit.plant-chip {
+  animation: none;
+  filter: none !important;
+  border-color: rgba(0, 207, 255, 0.9);
+  box-shadow:
+    0 0 0 1px rgba(0, 207, 255, 0.8),
+    0 0 18px rgba(0, 207, 255, 0.45),
+    0 0 42px rgba(0, 207, 255, 0.22) !important;
+}
+
+.plant-lit-hot {
+  text-shadow: 0 0 10px rgba(46, 230, 107, 0.55);
+}
+
+.plant-lit-hot.plant-panel,
+.plant-lit-hot.overlay-card,
+.plant-lit-hot.plant-btn,
+.plant-lit-hot.plant-chip {
+  border-color: rgba(46, 230, 107, 0.85);
+  box-shadow:
+    0 0 0 1px rgba(46, 230, 107, 0.8),
+    0 0 18px rgba(46, 230, 107, 0.42),
+    0 0 42px rgba(46, 230, 107, 0.2) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plant-cursor-trail {
+    display: none;
+  }
 }
 
 .plant-rain {
@@ -738,6 +902,10 @@ a.overlay-card:hover,
 }
 
 @media (max-width: 860px) {
+  .tool-decor-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 6px;
@@ -753,6 +921,10 @@ a.overlay-card:hover,
   .hero-hud { padding: 44px 14px 12px; }
   .hero-role { display: none; }
   .hero-foot .hero-mute { display: none; }
+}
+
+@media (max-width: 520px) {
+  .tool-decor { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -773,7 +945,8 @@ a.overlay-card:hover,
   .hero-role,
   .hero-tty,
   .hero-actions,
-  .hero-foot {
+  .hero-foot,
+  .tool-decor-icon {
     animation: none;
   }
 

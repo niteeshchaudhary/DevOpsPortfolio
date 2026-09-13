@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react'
 import { useScroll } from '../ScrollContext'
 import AsciiPortrait from '../components/AsciiPortrait'
 import SceneArt from '../world/SceneArt'
+import ToolDecor from '../components/ToolDecor'
 import { profile } from '../data/profile'
 
 const BOOT = `$ git status
@@ -66,6 +67,7 @@ export default function HeroScene() {
   return (
     <section ref={sectionRef} id="section-hero" className="hero-root relative h-screen min-h-screen w-full overflow-hidden">
       <SceneArt name="arrival" id="hero-img" />
+      <ToolDecor district="arrival" />
       <div className="hero-dim" />
       <div className="hero-scanlines" />
 
