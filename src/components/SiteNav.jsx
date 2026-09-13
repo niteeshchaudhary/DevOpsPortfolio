@@ -2,9 +2,9 @@ import { profile } from '../data/profile'
 
 const links = [
   { href: '#section-hero', label: 'START' },
-  { href: '#work', label: 'WORK' },
-  { href: '#experience', label: 'LOG' },
-  { href: '#contact', label: 'COMMS' },
+  { href: '#section-pipeline', label: 'WORK' },
+  { href: '#section-git', label: 'LOG' },
+  { href: '#section-finale', label: 'COMMS' },
 ]
 
 export default function SiteNav() {

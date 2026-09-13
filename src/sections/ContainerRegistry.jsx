@@ -1,24 +1,23 @@
 import { useRef, useEffect } from 'react'
 import { useScroll } from '../ScrollContext'
 import SceneArt from '../world/SceneArt'
+import { OverlayCard, OverlayRail, SceneCaption } from '../components/OverlayPanel'
+import { sceneWork } from '../data/sceneWork'
 
 export default function ContainerRegistry() {
   const { registerSection } = useScroll()
   const sectionRef = useRef(null)
   useEffect(() => { if (sectionRef.current) registerSection(4, sectionRef.current) }, [registerSection])
+  const data = sceneWork.registry
 
   return (
     <section ref={sectionRef} id="section-registry" className="district">
       <SceneArt name="registry" id="reg-img" />
-      <div className="district-stage pointer-events-none">
-        <div className="absolute bottom-[15vh] left-1/2 -translate-x-1/2 flex gap-3">
-          <img src="/real-devops-tools/original-svgs/docker.svg" alt="DockerHub" className="w-12 h-12 object-contain" />
-          <img src="/real-devops-tools/original-svgs/portainer-original.svg" alt="Portainer" className="w-10 h-10 object-contain" />
-          <img src="/real-devops-tools/original-svgs/rancher-original.svg" alt="Rancher" className="w-10 h-10 object-contain" />
-        </div>
-        <div className="absolute bottom-[8vh] text-center w-full">
-          <p className="text-[#596270] text-xs tracking-widest" style={{ fontFamily: 'JetBrains Mono' }}>CONTAINER REGISTRY → STORE · RETRIEVE · DEPLOY</p>
-        </div>
+      <div className="district-stage">
+        <OverlayRail eyebrow={data.eyebrow} title={data.title} side="left">
+          {data.projects.map((p) => <OverlayCard key={p.id} project={p} />)}
+        </OverlayRail>
+        <SceneCaption>REGISTRY · WEB & GAME IMAGES</SceneCaption>
       </div>
     </section>
   )

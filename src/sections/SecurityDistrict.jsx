@@ -1,39 +1,32 @@
 import { useRef, useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useScroll } from '../ScrollContext'
 import SceneArt from '../world/SceneArt'
-
-gsap.registerPlugin(ScrollTrigger)
+import { OverlayCard, OverlayRail, SceneCaption } from '../components/OverlayPanel'
+import { sceneWork } from '../data/sceneWork'
+import { profile } from '../data/profile'
 
 export default function SecurityDistrict() {
   const { registerSection } = useScroll()
   const sectionRef = useRef(null)
-
   useEffect(() => { if (sectionRef.current) registerSection(9, sectionRef.current) }, [registerSection])
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('#sec-badge', { opacity: 0, x: -50 }, {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 70%', end: 'top 35%', scrub: true },
-        opacity: 1, x: 0, ease: 'power2.out',
-      })
-    })
-    return () => ctx.revert()
-  }, [])
+  const data = sceneWork.security
 
   return (
     <section ref={sectionRef} id="section-security" className="district">
       <SceneArt name="security" id="sec-img" />
-      <div className="district-stage pointer-events-none">
-        <div id="sec-badge" className="absolute bottom-[20vh] right-[15vw] flex gap-3" style={{ opacity: 0 }}>
-          <img src="/real-devops-tools/original-svgs/vault-original.svg" alt="Vault" className="w-12 h-12 object-contain" />
-          <img src="/real-devops-tools/original-svgs/consul-original.svg" alt="Consul" className="w-10 h-10 object-contain" />
-          <img src="/real-devops-tools/original-svgs/nginx-original.svg" alt="NGINX" className="w-10 h-10 object-contain" />
-        </div>
-        <div className="absolute bottom-[8vh] text-center w-full">
-          <p className="text-[#F4B740] text-xs tracking-widest" style={{ fontFamily: 'JetBrains Mono' }}>SECURITY DISTRICT → FIREWALL · IAM · SECRETS · TLS · WAF</p>
-        </div>
+      <div className="district-stage">
+        <OverlayRail eyebrow={data.eyebrow} title={data.title} side="right">
+          {data.projects.map((p) => <OverlayCard key={p.id} project={p} />)}
+          <a
+            href={`mailto:${profile.email}`}
+            className="block w-[min(92vw,380px)] border border-[#F4B740]/50 bg-[#0D1117]/82 p-4 backdrop-blur-md"
+          >
+            <p className="text-[10px] tracking-[0.2em] text-[#F4B740]" style={{ fontFamily: 'JetBrains Mono' }}>CHECKPOINT</p>
+            <p className="mt-2 text-[13px] text-[#E8EDF2]" style={{ fontFamily: 'JetBrains Mono' }}>Available for work</p>
+            <p className="mt-2 text-[12px] text-[#9AA3AD]">{profile.email}</p>
+          </a>
+        </OverlayRail>
+        <SceneCaption>SECURITY · CLEARANCE FOR CONTACT</SceneCaption>
       </div>
     </section>
   )

@@ -103,8 +103,8 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 68vh;
-    min-height: 440px;
+    height: 100vh;
+    min-height: 100vh;
   }
 
   .district-stage {

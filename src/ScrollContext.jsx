@@ -22,7 +22,6 @@ export function ScrollProvider({ children }) {
     { id: 'cloud', label: 'Cloud', color: '#00A7D6' },
     { id: 'security', label: 'Security', color: '#F4B740' },
     { id: 'production', label: 'Production', color: '#00C853' },
-    { id: 'work', label: 'Work', color: '#B388FF' },
     { id: 'contact', label: 'Contact', color: '#00D5FF' },
   ];
 

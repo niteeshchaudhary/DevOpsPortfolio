@@ -132,7 +132,7 @@ export default function HeroScene() {
               {profile.title.toUpperCase()}
             </p>
             <div className="flex flex-wrap gap-3 mt-3">
-              <a href="#work" className="text-[#2EE66B] text-[9px] tracking-wider px-2 py-0.5 border border-[#2EE66B] rounded hover:bg-[#2EE66B]/10" style={{ fontFamily: 'JetBrains Mono' }}>
+              <a href="#section-pipeline" className="text-[#2EE66B] text-[9px] tracking-wider px-2 py-0.5 border border-[#2EE66B] rounded hover:bg-[#2EE66B]/10" style={{ fontFamily: 'JetBrains Mono' }}>
                 EXPLORE PROJECTS
               </a>
               <a href={profile.github} target="_blank" rel="noopener noreferrer" className="text-[#00CFFF] text-[9px] tracking-wider px-2 py-0.5 border border-[#00CFFF] rounded hover:bg-[#00CFFF]/10" style={{ fontFamily: 'JetBrains Mono' }}>
@@ -163,7 +163,7 @@ export default function HeroScene() {
             INFRASTRUCTURE DEPLOYMENT
           </h1>
           <p id="hero-sub" className="text-[#596270] text-xs mt-2" style={{ fontFamily: 'JetBrains Mono', opacity: 0 }}>
-            scroll to follow the pipeline
+            scroll to follow the work through the plant
           </p>
         </div>
       </div>

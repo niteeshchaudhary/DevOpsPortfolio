@@ -3,7 +3,6 @@ import Loader from './components/Loader'
 import ProgressBar from './components/ProgressBar'
 import WorldBackground from './components/WorldBackground'
 import AtmosphereLayer from './components/AtmosphereLayer'
-import SceneTransition from './components/SceneTransition'
 import MechanicalDirector from './world/MechanicalDirector'
 import HeroScene from './sections/HeroScene'
 import GitSection from './sections/GitSection'
@@ -16,7 +15,6 @@ import DatabaseReservoir from './sections/DatabaseReservoir'
 import CloudInfrastructure from './sections/CloudInfrastructure'
 import SecurityDistrict from './sections/SecurityDistrict'
 import ProductionCity from './sections/ProductionCity'
-import WorkManifest from './sections/WorkManifest'
 import FinaleScene from './sections/FinaleScene'
 import SiteNav from './components/SiteNav'
 
@@ -41,8 +39,6 @@ export default function App() {
         <CloudInfrastructure />
         <SecurityDistrict />
         <ProductionCity />
-        <SceneTransition type="pipeline" />
-        <WorkManifest />
         <FinaleScene />
       </main>
     </ScrollProvider>
