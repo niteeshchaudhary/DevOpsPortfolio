@@ -3,6 +3,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useScroll } from '../ScrollContext'
 import AsciiPortrait from '../components/AsciiPortrait'
+import SceneArt from '../world/SceneArt'
+import { profile } from '../data/profile'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -18,7 +20,7 @@ const COMMANDS = [
   { text: 'Enumerating objects: 28, done.', delay: 7, color: '#596270' },
   { text: 'remote: Resolving deltas: 100% (28/28)', delay: 7.5, color: '#00CFFF' },
   { text: 'remote: Pipeline triggered ✓', delay: 8, color: '#2EE66B' },
-  { text: 'To github.com:portfolio/infra.git', delay: 8.5, color: '#596270' },
+  { text: `To github.com:${profile.handle}/k8_istio_krakend.git`, delay: 8.5, color: '#596270' },
   { text: 'main -> main', delay: 9, color: '#00CFFF' },
 ]
 
@@ -31,15 +33,8 @@ export default function HeroScene() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('#hero-img', { scale: 0.82, opacity: 0.15, filter: 'blur(6px)' }, {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top top', end: 'top+=30% top', scrub: true },
-        scale: 1, opacity: 1, filter: 'blur(0px)', ease: 'power2.out',
-      })
-      const tl = gsap.timeline({
-        scrollTrigger: { trigger: sectionRef.current, start: 'top top', end: 'top+=40% top', scrub: true },
-      })
-      tl.fromTo('#hero-title', { opacity: 0, y: 40 }, { opacity: 1, y: 0, ease: 'power2.out' })
-        .fromTo('#hero-sub', { opacity: 0 }, { opacity: 0.7, ease: 'power2.out' })
+      gsap.fromTo('#hero-title', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1, delay: 0.4, ease: 'power2.out' })
+      gsap.fromTo('#hero-sub', { opacity: 0 }, { opacity: 0.7, duration: 1, delay: 0.7, ease: 'power2.out' })
 
       // Neofetch card: fade/slide in on first load, independent of the
       // scroll-scrubbed timeline so it's visible the moment the page loads.
@@ -61,13 +56,12 @@ export default function HeroScene() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="section-hero" className="relative w-full overflow-hidden" style={{ height: '185vh' }}>
-      <div className="sticky top-0 w-full h-screen flex flex-col items-center justify-center">
-        <img id="hero-img" src="/scenes/scene-01-arrival.svg" alt="Arrival"
-          className="w-full max-w-[85vw] max-h-[70vh] object-contain" />
+    <section ref={sectionRef} id="section-hero" className="relative w-full overflow-hidden min-h-screen h-screen">
+      <SceneArt name="arrival" id="hero-img" />
+      <div className="relative z-10 w-full h-screen pointer-events-none">
 
         {/* Terminal overlay */}
-        <div className="absolute top-[12vh] right-[8vw] bg-[#0D1117] border border-[#262C34] rounded-md p-4 w-[340px] shadow-lg opacity-95"
+        <div className="absolute top-[12vh] right-[4vw] bg-[#0D1117]/80 border border-[#262C34] rounded-md p-4 w-[min(92vw,540px)] shadow-lg backdrop-blur-sm"
           style={{ fontFamily: 'IBM Plex Mono' }}>
           <div className="flex items-center gap-2 mb-3 border-b border-[#171C24] pb-2">
             <span className="w-3 h-3 rounded-full bg-[#FF5A5A] opacity-70" />
@@ -75,7 +69,7 @@ export default function HeroScene() {
             <span className="w-3 h-3 rounded-full bg-[#2EE66B] opacity-70" />
             <span className="text-[10px] text-[#596270] ml-2 tracking-wider">terminal — portfolio.git</span>
           </div>
-          <div className="text-xs leading-relaxed space-y-0.5">
+          <div className="text-xs leading-relaxed space-y-0.5 whitespace-nowrap">
             {COMMANDS.slice(0, visibleLines).map((cmd, i) => (
               <div key={i}>
                 <span style={{ color: cmd.color }}>
@@ -94,7 +88,7 @@ export default function HeroScene() {
         </div>
 
         {/* Neofetch intro terminal — ASCII portrait + whoami */}
-        <div id="hero-card" className="absolute bottom-[7vh] left-[5vw] bg-[#0D1117] border border-[#39414B] rounded-md shadow-xl flex flex-col overflow-hidden" style={{ opacity: 0, maxWidth: 'min(94vw, 640px)' }}>
+        <div id="hero-card" className="pointer-events-auto absolute bottom-[7vh] left-[3vw] bg-[#0D1117]/80 border border-[#39414B] rounded-md shadow-xl flex flex-col backdrop-blur-sm" style={{ opacity: 0, width: 'min(96vw, 760px)' }}>
           <div className="flex items-center gap-2 px-4 py-2 border-b border-[#171C24] bg-[#070A0E]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#FF5A5A] opacity-70" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#F4B740] opacity-70" />
@@ -104,24 +98,24 @@ export default function HeroScene() {
             </span>
           </div>
 
-          <div className="flex gap-5 px-4 py-3 items-start">
-            <div style={{ fontSize: '6px', lineHeight: '1' }}>
+          <div className="flex gap-5 px-4 py-3 items-start min-w-0">
+            <div className="shrink-0 overflow-visible" style={{ fontSize: '6px', lineHeight: '1' }}>
               <AsciiPortrait color="#00CFFF" />
             </div>
-            <div className="text-[11px] leading-snug space-y-0.5 mt-0.5" style={{ fontFamily: 'IBM Plex Mono' }}>
+            <div className="text-[11px] leading-snug space-y-0.5 mt-0.5 shrink-0 whitespace-nowrap" style={{ fontFamily: 'IBM Plex Mono' }}>
               <div>
-                <span className="text-[#00D5FF] font-bold">Niteesh</span>
+                <span className="text-[#00D5FF] font-bold">{profile.shortName}</span>
                 <span className="text-[#596270]">@</span>
-                <span className="text-[#00D5FF] font-bold">portfolio</span>
+                <span className="text-[#00D5FF] font-bold">{profile.handle}</span>
               </div>
               <div className="text-[#39414B]">───────────────────</div>
-              <div><span className="text-[#F4B740]">OS</span><span className="text-[#596270]">:       </span><span className="text-[#E0E0E0]">DevOps Engineer</span></div>
-              <div><span className="text-[#F4B740]">Kernel</span><span className="text-[#596270]">:   </span><span className="text-[#E0E0E0]">EKS · Kubernetes</span></div>
-              <div><span className="text-[#F4B740]">Shell</span><span className="text-[#596270]">:   </span><span className="text-[#E0E0E0]">bash 5.x / zsh</span></div>
-              <div><span className="text-[#F4B740]">Uptime</span><span className="text-[#596270]">: </span><span className="text-[#2EE66B]">99.99% · 24/7</span></div>
-              <div><span className="text-[#F4B740]">Pkgs</span><span className="text-[#596270]">:   </span><span className="text-[#E0E0E0]">Terraform · Helm · ArgoCD</span></div>
-              <div><span className="text-[#F4B740]">Skills</span><span className="text-[#596270]">: </span><span className="text-[#00CFFF]">CI/CD · IaC · K8s</span></div>
-              <div><span className="text-[#F4B740]">Monitor</span><span className="text-[#596270]">:</span><span className="text-[#4FC3F7]"> Prometheus · Grafana</span></div>
+              <div><span className="text-[#F4B740]">OS</span><span className="text-[#596270]">:       </span><span className="text-[#E0E0E0]">Software Engineer</span></div>
+              <div><span className="text-[#F4B740]">Kernel</span><span className="text-[#596270]">:   </span><span className="text-[#E0E0E0]">K8s · Istio · ArgoCD</span></div>
+              <div><span className="text-[#F4B740]">Shell</span><span className="text-[#596270]">:   </span><span className="text-[#E0E0E0]">bash · React · Python</span></div>
+              <div><span className="text-[#F4B740]">Mail</span><span className="text-[#596270]">:    </span><span className="text-[#2EE66B]">{profile.email}</span></div>
+              <div><span className="text-[#F4B740]">Pkgs</span><span className="text-[#596270]">:    </span><span className="text-[#E0E0E0]">Docker · Helm · OpenCV</span></div>
+              <div><span className="text-[#F4B740]">Skills</span><span className="text-[#596270]">:  </span><span className="text-[#00CFFF]">Full stack · DevOps · AI</span></div>
+              <div><span className="text-[#F4B740]">Host</span><span className="text-[#596270]">:    </span><span className="text-[#4FC3F7]">github.com/{profile.handle}</span></div>
               <div className="pt-1">
                 <span className="text-[#596270]">$ </span>
                 <span className="text-[#2EE66B]">whoami</span>
@@ -132,18 +126,21 @@ export default function HeroScene() {
 
           <div className="px-4 pb-3 pt-2 border-t border-[#171C24]">
             <p className="text-[#00CFFF] text-sm font-bold tracking-wider" style={{ fontFamily: 'JetBrains Mono' }}>
-              HELLO, I'M NITEESH
+              HELLO, I'M {profile.shortName.toUpperCase()}
             </p>
             <p className="text-[#596270] text-[10px] mt-1 tracking-wide" style={{ fontFamily: 'JetBrains Mono' }}>
-              DEVOPS ENGINEER · CLOUD INFRASTRUCTURE · CI/CD · PLATFORM ENGINEERING
+              {profile.title.toUpperCase()}
             </p>
-            <div className="flex gap-3 mt-3">
-              <span className="text-[#2EE66B] text-[9px] tracking-wider px-2 py-0.5 border border-[#2EE66B] rounded" style={{ fontFamily: 'JetBrains Mono' }}>
+            <div className="flex flex-wrap gap-3 mt-3">
+              <a href="#work" className="text-[#2EE66B] text-[9px] tracking-wider px-2 py-0.5 border border-[#2EE66B] rounded hover:bg-[#2EE66B]/10" style={{ fontFamily: 'JetBrains Mono' }}>
                 EXPLORE PROJECTS
-              </span>
-              <span className="text-[#00CFFF] text-[9px] tracking-wider px-2 py-0.5 border border-[#00CFFF] rounded" style={{ fontFamily: 'JetBrains Mono' }}>
-                RESUME ↓
-              </span>
+              </a>
+              <a href={profile.github} target="_blank" rel="noopener noreferrer" className="text-[#00CFFF] text-[9px] tracking-wider px-2 py-0.5 border border-[#00CFFF] rounded hover:bg-[#00CFFF]/10" style={{ fontFamily: 'JetBrains Mono' }}>
+                GITHUB
+              </a>
+              <a href={`mailto:${profile.email}`} className="text-[#FF8F1F] text-[9px] tracking-wider px-2 py-0.5 border border-[#FF8F1F] rounded hover:bg-[#FF8F1F]/10" style={{ fontFamily: 'JetBrains Mono' }}>
+                EMAIL
+              </a>
             </div>
           </div>
         </div>

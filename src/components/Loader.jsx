@@ -76,18 +76,18 @@ export default function Loader() {
       className="fixed inset-0 z-[9999] bg-[#0A0F14] flex flex-col items-center justify-center px-4"
     >
       <div className="flex flex-col items-center gap-5">
-        <div className="overflow-hidden max-w-full" style={{ fontSize: '6px', lineHeight: '1' }}>
+        <div className="overflow-visible max-w-full" style={{ fontSize: '6px', lineHeight: '1' }}>
           <AsciiPortrait color="#00CFFF" />
         </div>
 
-        <div className="bg-[#0D1117] border border-[#262C34] rounded-md px-4 py-3 w-[300px] max-w-full" style={{ fontFamily: 'IBM Plex Mono' }}>
+        <div className="bg-[#0D1117] border border-[#262C34] rounded-md px-4 py-3 w-[min(92vw,440px)]" style={{ fontFamily: 'IBM Plex Mono' }}>
           <div className="flex items-center gap-2 mb-2 border-b border-[#171C24] pb-1.5">
             <span className="w-2 h-2 rounded-full bg-[#FF5A5A] opacity-70" />
             <span className="w-2 h-2 rounded-full bg-[#F4B740] opacity-70" />
             <span className="w-2 h-2 rounded-full bg-[#2EE66B] opacity-70" />
             <span className="text-[9px] text-[#596270] ml-1 tracking-wider">init — portfolio</span>
           </div>
-          <div className="text-[10px] leading-tight space-y-0.5">
+          <div className="text-[10px] leading-tight space-y-0.5 whitespace-nowrap">
             {BOOT_LINES.slice(0, visibleLines).map((line, i) => (
               <div key={i} style={{ color: line.color }}>
                 {line.text}
