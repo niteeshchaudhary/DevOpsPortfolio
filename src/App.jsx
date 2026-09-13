@@ -19,6 +19,8 @@ import ProductionCity from './sections/ProductionCity'
 import FinaleScene from './sections/FinaleScene'
 import SiteNav from './components/SiteNav'
 import CursorFX from './components/CursorFX'
+import OpsTicker from './components/OpsTicker'
+import StageRail from './components/StageRail'
 
 export default function App() {
   return (
@@ -29,6 +31,8 @@ export default function App() {
       <MechanicalDirector />
       <ProgressBar />
       <SiteNav />
+      <StageRail />
+      <OpsTicker />
       <CursorFX />
       <GlyphRain />
       <main className="relative z-10">

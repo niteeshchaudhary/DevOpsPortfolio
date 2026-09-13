@@ -25,9 +25,17 @@ export function PlantPanel({ as: Comp = 'div', className = '', children, ...rest
   )
 }
 
+function traceOf(slug) {
+  let h = 2166136261
+  for (const c of slug) h ^= c.charCodeAt(0) * 16777619
+  return (h >>> 0).toString(16).slice(0, 8)
+}
+
 export function OverlayCard({ project }) {
   if (!project) return null
   const accent = categoryColor[project.category] || '#00CFFF'
+  const trace = traceOf(project.slug)
+  const ms = 18 + (parseInt(trace.slice(0, 2), 16) % 40)
   return (
     <PlantPanel
       as="a"
@@ -52,9 +60,13 @@ export function OverlayCard({ project }) {
           <span key={t} className="plant-chip">{t}</span>
         ))}
       </div>
-      <p className="mt-3 text-[10px] tracking-[0.16em]" style={{ fontFamily: 'JetBrains Mono', color: accent }}>
-        VIEW SOURCE →
-      </p>
+      <div className="card-ops">
+        <span className="card-ops-led" />
+        <span>HEALTHY</span>
+        <span className="card-ops-mute">span {trace}</span>
+        <span className="card-ops-mute">{ms}ms</span>
+        <span className="card-ops-link" style={{ color: accent }}>SOURCE →</span>
+      </div>
     </PlantPanel>
   )
 }
@@ -118,7 +130,7 @@ export function OverlayRail({ eyebrow, title, children }) {
 export function SceneCaption({ children }) {
   return (
     <p
-      className="pointer-events-none absolute bottom-[3%] left-0 right-0 z-20 text-center text-[10px] tracking-[0.18em] text-[#596270]"
+      className="pointer-events-none absolute bottom-[38px] left-0 right-0 z-20 text-center text-[10px] tracking-[0.18em] text-[#596270]"
       style={{ fontFamily: 'JetBrains Mono' }}
     >
       {children}
