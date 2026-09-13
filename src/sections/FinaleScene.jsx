@@ -14,7 +14,7 @@ export default function FinaleScene() {
       <SceneArt name="finale" id="finale-img" />
       <div className="district-stage">
         <OverlayRail eyebrow="COMMS" title={profile.name} side="left">
-          <div className="w-[min(92vw,420px)] border border-[#F4B740]/50 bg-[#0D1117]/85 p-5 backdrop-blur-md">
+          <div className="overlay-focus overlay-card relative w-full border border-[#F4B740]/50 bg-[#0D1117]/88 p-5 backdrop-blur-md">
             <p className="text-[12px] leading-relaxed text-[#C8CDD3]">{profile.bio}</p>
             <p className="mt-3 text-[11px] text-[#00CFFF]" style={{ fontFamily: 'JetBrains Mono' }}>{profile.title}</p>
             <a href={`mailto:${profile.email}`} className="mt-4 block text-[#FF8F1F] hover:underline" style={{ fontFamily: 'IBM Plex Mono' }}>

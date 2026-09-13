@@ -16,7 +16,7 @@ export default function GitSection() {
       <div className="district-stage">
         <OverlayRail eyebrow={data.eyebrow} title={data.title} side="right">
           {data.jobs.map((job) => (
-            <div key={job.company} className="w-[min(92vw,380px)] border border-[#262C34] bg-[#0D1117]/82 p-4 backdrop-blur-md">
+            <div key={job.company} className="overlay-focus overlay-card relative w-full border border-[#00CFFF]/25 bg-[#0D1117]/88 p-4 backdrop-blur-md">
               <p className="text-[10px] text-[#00CFFF]" style={{ fontFamily: 'IBM Plex Mono' }}>{job.time}</p>
               <p className="mt-1 text-[13px] text-[#E8EDF2]" style={{ fontFamily: 'JetBrains Mono' }}>{job.role}</p>
               <p className="mt-1 text-[11px] text-[#2EE66B]" style={{ fontFamily: 'JetBrains Mono' }}>{job.company}</p>

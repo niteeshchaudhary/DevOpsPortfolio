@@ -146,9 +146,9 @@ export function Crane({ x, y, reach = 220, color = C.ci }) {
       <rect x="-18" y="0" width="36" height="14" fill={C.steel} />
       <rect x={dir < 0 ? -span : 0} y="-150" width={span} height="10" fill={C.steelHi} />
       <circle cx="0" cy="-150" r="6" fill={color} filter="url(#wd-glow)" />
-      <g className="mech-trolley" data-dir={dir}>
-        <line x1={dir * span * 0.55} y1="-145" x2={dir * span * 0.55} y2="-48" stroke={C.steelHi} strokeWidth="2" />
-        <rect x={dir * span * 0.55 - 16} y="-48" width="32" height="22" rx="2" fill={C.metal} stroke={color} />
+      <g className="mech-trolley" data-dir={dir} data-span={span}>
+        <line x1={dir * span * 0.62} y1="-145" x2={dir * span * 0.62} y2="-48" stroke={C.steelHi} strokeWidth="2" />
+        <rect x={dir * span * 0.62 - 16} y="-48" width="32" height="22" rx="2" fill={C.metal} stroke={color} />
       </g>
     </g>
   )
@@ -191,13 +191,16 @@ export function Piston({ x, y, color = C.ci }) {
   )
 }
 
-export function Packet({ x, y, color = C.water, axis = 'x' }) {
+export function Packet({ x, y, color = C.water, axis = 'x', travel }) {
+  const dist = travel ?? (axis === 'y' ? 56 : 72)
   return (
     <circle
       className={axis === 'y' ? 'mech-packet-y' : 'mech-packet-x'}
       cx={x}
       cy={y}
       r="5"
+      data-travel={dist}
+      style={{ ['--travel']: `${dist}px` }}
       fill={color}
       filter="url(#wd-glow)"
     />
@@ -218,10 +221,10 @@ export function Tank({ x, y, r = 46, color = C.db, label }) {
   )
 }
 
-export function Ship({ x, y, w = 160, color = C.healthy }) {
+export function Ship({ x, y, w = 160, color = C.healthy, dir = 1 }) {
   return (
     <g transform={`translate(${x},${y})`}>
-      <g className="mech-ship">
+      <g className="mech-ship" data-dir={dir}>
         <path d={`M0,18 L${w * 0.12},0 L${w * 0.88},0 L${w},18 L${w * 0.92},34 L${w * 0.08},34 Z`} fill={C.steelLo} stroke={C.steelHi} />
         <rect x={w * 0.22} y="-22" width={w * 0.28} height="24" fill={C.panel} stroke={C.steel} />
         <rect x={w * 0.54} y="-14" width={w * 0.2} height="16" fill={C.metal} />

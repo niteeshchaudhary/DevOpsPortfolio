@@ -16,7 +16,7 @@ export default function MonitoringCity() {
       <div className="district-stage">
         <OverlayRail eyebrow={data.eyebrow} title={data.title} side="left">
           {data.skills.map((g) => (
-            <div key={g.name} className="w-[min(92vw,380px)] border border-[#262C34] bg-[#0D1117]/82 p-4 backdrop-blur-md">
+            <div key={g.name} className="overlay-focus overlay-card relative w-full border border-[#00CFFF]/25 bg-[#0D1117]/88 p-4 backdrop-blur-md">
               <p className="mb-2 text-[10px] tracking-[0.2em] text-[#B388FF]" style={{ fontFamily: 'JetBrains Mono' }}>{g.name.toUpperCase()}</p>
               <div className="flex flex-wrap gap-1.5">
                 {g.items.map((s) => (

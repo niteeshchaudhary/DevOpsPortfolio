@@ -19,7 +19,7 @@ export default function SecurityDistrict() {
           {data.projects.map((p) => <OverlayCard key={p.id} project={p} />)}
           <a
             href={`mailto:${profile.email}`}
-            className="block w-[min(92vw,380px)] border border-[#F4B740]/50 bg-[#0D1117]/82 p-4 backdrop-blur-md"
+            className="overlay-focus overlay-card relative block w-full border border-[#F4B740]/50 bg-[#0D1117]/88 p-4 backdrop-blur-md"
           >
             <p className="text-[10px] tracking-[0.2em] text-[#F4B740]" style={{ fontFamily: 'JetBrains Mono' }}>CHECKPOINT</p>
             <p className="mt-2 text-[13px] text-[#E8EDF2]" style={{ fontFamily: 'JetBrains Mono' }}>Available for work</p>
